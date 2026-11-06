@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useParams } from "next/navigation";
 import { fetchTicketPedidoApi, TicketData } from "@/lib/api";
 
-export default function TicketPrintPage() {
+function TicketContent() {
   const params = useParams();
   const idPedido = Number(params.id);
 
@@ -160,5 +160,13 @@ export default function TicketPrintPage() {
         }
       `}</style>
     </div>
+  );
+}
+
+export default function TicketPrintPage() {
+  return (
+    <Suspense fallback={<div className="p-8 text-center text-sm font-mono">Cargando ticket...</div>}>
+      <TicketContent />
+    </Suspense>
   );
 }
