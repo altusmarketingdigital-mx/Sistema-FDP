@@ -63,13 +63,13 @@ export default function ReporteMovimientosPage() {
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white">Reporte General de Movimientos</h1>
-          <p className="text-sm text-slate-400">Trazabilidad completa: Clientes &bull; Pedidos &bull; Notas de Remisión &bull; Cobranza</p>
+          <h1 className="text-2xl font-bold text-slate-900">Reporte General de Movimientos</h1>
+          <p className="text-sm text-slate-500">Trazabilidad completa: Clientes &bull; Pedidos &bull; Notas de Remisión &bull; Cobranza</p>
         </div>
         <button
           onClick={exportarCSV}
           disabled={movimientos.length === 0}
-          className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-medium text-sm rounded-lg shadow transition flex items-center gap-2 self-start md:self-auto cursor-pointer"
+          className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-slate-900 font-medium text-sm rounded-lg shadow transition flex items-center gap-2 self-start md:self-auto cursor-pointer"
         >
           <span>📥 Exportar a Excel (CSV)</span>
         </button>
@@ -78,24 +78,24 @@ export default function ReporteMovimientosPage() {
       {/* Tarjetas de Resumen Financiero */}
       {resumen && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+          <div className="bg-white border border-slate-200 p-5 rounded-xl">
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">
               Pedidos de Hoy
             </span>
-            <span className="text-2xl font-bold text-white">{resumen.totalPedidos}</span>
+            <span className="text-2xl font-bold text-slate-900">{resumen.totalPedidos}</span>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+          <div className="bg-white border border-slate-200 p-5 rounded-xl">
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">
               Cobranza Histórica Aplicada
             </span>
-            <span className="text-2xl font-bold text-emerald-400 font-mono">
+            <span className="text-2xl font-bold text-emerald-600 font-mono">
               ${resumen.totalCobrado.toFixed(2)}
             </span>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl">
-            <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+          <div className="bg-white border border-slate-200 p-5 rounded-xl">
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">
               Registros Consolidados
             </span>
             <span className="text-2xl font-bold text-cyan-400 font-mono">
@@ -106,15 +106,15 @@ export default function ReporteMovimientosPage() {
       )}
 
       {/* Tabla de Movimientos */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-sm">
+      <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         {cargando ? (
-          <div className="p-8 text-center text-slate-400 text-sm">Ejecutando spSELReporteMovimientos...</div>
+          <div className="p-8 text-center text-slate-500 text-sm">Ejecutando spSELReporteMovimientos...</div>
         ) : movimientos.length === 0 ? (
-          <div className="p-8 text-center text-slate-400 text-sm">No se encontraron movimientos registrados.</div>
+          <div className="p-8 text-center text-slate-500 text-sm">No se encontraron movimientos registrados.</div>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm text-slate-300">
-              <thead className="bg-slate-950 text-xs uppercase text-slate-400 border-b border-slate-800">
+            <table className="w-full text-left text-sm text-slate-700">
+              <thead className="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
                 <tr>
                   <th className="px-5 py-3 font-semibold">Cliente</th>
                   <th className="px-5 py-3 font-semibold">Pedido</th>
@@ -125,26 +125,26 @@ export default function ReporteMovimientosPage() {
                   <th className="px-5 py-3 font-semibold text-right">Saldo Nvo.</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800">
+              <tbody className="divide-y divide-slate-100">
                 {movimientos.map((m) => (
-                  <tr key={m.id} className="hover:bg-slate-800/40 transition">
-                    <td className="px-5 py-3.5 font-medium text-white">
+                  <tr key={m.id} className="hover:bg-slate-50 transition">
+                    <td className="px-5 py-3.5 font-medium text-slate-900">
                       <div>{m.nombreCliente}</div>
                       <div className="text-[11px] font-mono text-slate-500">{m.rfc || "—"}</div>
                     </td>
-                    <td className="px-5 py-3.5 font-mono text-xs text-slate-300">
+                    <td className="px-5 py-3.5 font-mono text-xs text-slate-700">
                       {m.folio} #{m.idPedido}
                     </td>
-                    <td className="px-5 py-3.5 font-mono text-xs text-emerald-400">
+                    <td className="px-5 py-3.5 font-mono text-xs text-emerald-600">
                       {m.idNotaRemision > 0 ? `Remisión #${m.idNotaRemision}` : "—"}
                     </td>
-                    <td className="px-5 py-3.5 text-xs text-slate-400">
+                    <td className="px-5 py-3.5 text-xs text-slate-500">
                       {m.nombreCajeroNota || "—"}
                     </td>
                     <td className="px-5 py-3.5 text-center">
                       <span className={`px-2 py-0.5 rounded text-[11px] font-semibold ${
                         m.estatusNotas === "Pagado"
-                          ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                          ? "bg-emerald-500/10 text-emerald-600 border border-emerald-500/20"
                           : m.estatusNotas === "Cancelado"
                           ? "bg-rose-500/10 text-rose-400 border border-rose-500/20"
                           : "bg-amber-500/10 text-amber-400 border border-amber-500/20"
@@ -155,7 +155,7 @@ export default function ReporteMovimientosPage() {
                     <td className="px-5 py-3.5 text-right font-mono text-xs">
                       ${Number(m.saldoAnterior).toFixed(2)}
                     </td>
-                    <td className="px-5 py-3.5 text-right font-mono text-xs font-semibold text-white">
+                    <td className="px-5 py-3.5 text-right font-mono text-xs font-semibold text-slate-900">
                       ${Number(m.saldoNuevo).toFixed(2)}
                     </td>
                   </tr>

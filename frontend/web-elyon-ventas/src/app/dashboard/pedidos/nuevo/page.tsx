@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import {
   fetchClientesApi,
   fetchProductosApi,
@@ -123,7 +124,7 @@ export default function NuevoPedidoPage() {
       } else {
         alert(res.mensaje || "Error al registrar el pedido.");
       }
-    } catch (err: any) {
+    } catch {
       alert("Error de red al guardar pedido.");
     } finally {
       setGuardando(false);
@@ -131,32 +132,32 @@ export default function NuevoPedidoPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-w-6xl">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-white">Generar Nuevo Pedido</h1>
-          <p className="text-sm text-slate-400">Captura ágil de venta en mostrador &bull; Conversión a Remisión / Ticket</p>
+          <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Generar Nuevo Pedido</h1>
+          <p className="text-sm text-slate-500 mt-0.5">Captura ágil de venta en mostrador &bull; Conversión a Remisión / Ticket</p>
         </div>
         <div className="flex items-center gap-3">
-          <a
+          <Link
             href="/dashboard/pedidos"
-            className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium rounded-lg border border-slate-700 transition"
+            className="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold rounded-xl border border-slate-200 shadow-xs transition"
           >
             Ver Historial
-          </a>
+          </Link>
         </div>
       </div>
 
       {mensajeExito && (
-        <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 rounded-xl flex items-center justify-between">
+        <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl flex items-center justify-between shadow-xs">
           <div className="flex items-center gap-3">
-            <span className="font-semibold">{mensajeExito}</span>
+            <span className="font-semibold text-sm">{mensajeExito}</span>
           </div>
           {idPedidoGenerado && (
             <a
               href={`/impresion/ticket/${idPedidoGenerado}`}
               target="_blank"
-              className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-lg shadow transition"
+              className="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg shadow-sm transition"
             >
               Imprimir Ticket 80mm
             </a>
@@ -165,13 +166,13 @@ export default function NuevoPedidoPage() {
       )}
 
       {/* Datos del Cliente y Condiciones */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs grid grid-cols-1 md:grid-cols-3 gap-5">
         <div>
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Cliente</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Cliente</label>
           <select
             value={clienteSeleccionado?.pK_Id_Cliente || 0}
             onChange={(e) => handleCambioCliente(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           >
             {clientes.map((c) => (
               <option key={c.pK_Id_Cliente} value={c.pK_Id_Cliente}>
@@ -182,35 +183,35 @@ export default function NuevoPedidoPage() {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Días de Crédito</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Días de Crédito</label>
           <input
             type="number"
             value={diasCredito}
             onChange={(e) => setDiasCredito(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Comentarios</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Comentarios</label>
           <input
             type="text"
             value={comentario}
             onChange={(e) => setComentario(e.target.value)}
             placeholder="Nota o referencia de entrega..."
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           />
         </div>
       </div>
 
       {/* Captura de Productos */}
-      <form onSubmit={handleAgregarPartida} className="bg-slate-900 border border-slate-800 rounded-xl p-5 grid grid-cols-1 md:grid-cols-6 gap-3 items-end">
+      <form onSubmit={handleAgregarPartida} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs grid grid-cols-1 md:grid-cols-6 gap-4 items-end">
         <div className="md:col-span-2">
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Producto</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Producto</label>
           <select
             value={productoSeleccionado?.id || 0}
             onChange={(e) => handleCambioProducto(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           >
             {productos.map((p) => (
               <option key={p.id} value={p.id}>
@@ -221,43 +222,43 @@ export default function NuevoPedidoPage() {
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Cantidad</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Cantidad</label>
           <input
             type="number"
             step={productoSeleccionado?.tiene_Decimal ? "0.01" : "1"}
             min="0.01"
             value={cantidad}
             onChange={(e) => setCantidad(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Precio ($)</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Precio ($)</label>
           <input
             type="number"
             step="0.01"
             value={precio}
             onChange={(e) => setPrecio(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Descuento ($)</label>
+          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Descuento ($)</label>
           <input
             type="number"
             step="0.01"
             value={descuento}
             onChange={(e) => setDescuento(Number(e.target.value))}
-            className="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           />
         </div>
 
         <div>
           <button
             type="submit"
-            className="w-full py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm rounded-lg shadow transition"
+            className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-xs transition"
           >
             + Agregar
           </button>
@@ -265,39 +266,39 @@ export default function NuevoPedidoPage() {
       </form>
 
       {/* Tabla de Partidas */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-sm">
-        <table className="w-full text-left text-sm text-slate-300">
-          <thead className="bg-slate-950 text-xs uppercase text-slate-400 border-b border-slate-800">
+      <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
+        <table className="w-full text-left text-sm text-slate-700">
+          <thead className="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
             <tr>
-              <th className="px-6 py-3 font-semibold">Clave</th>
-              <th className="px-6 py-3 font-semibold">Producto</th>
-              <th className="px-6 py-3 font-semibold text-center">Cant.</th>
-              <th className="px-6 py-3 font-semibold text-right">Precio</th>
-              <th className="px-6 py-3 font-semibold text-right">Desc.</th>
-              <th className="px-6 py-3 font-semibold text-right">Importe</th>
-              <th className="px-6 py-3 font-semibold text-center">Acción</th>
+              <th className="px-6 py-3.5 font-bold">Clave</th>
+              <th className="px-6 py-3.5 font-bold">Producto</th>
+              <th className="px-6 py-3.5 font-bold text-center">Cant.</th>
+              <th className="px-6 py-3.5 font-bold text-right">Precio</th>
+              <th className="px-6 py-3.5 font-bold text-right">Desc.</th>
+              <th className="px-6 py-3.5 font-bold text-right">Importe</th>
+              <th className="px-6 py-3.5 font-bold text-center">Acción</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-800">
+          <tbody className="divide-y divide-slate-100">
             {partidas.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-6 py-8 text-center text-slate-500 text-sm">
+                <td colSpan={7} className="px-6 py-10 text-center text-slate-400 text-sm font-medium">
                   No hay artículos agregados al pedido.
                 </td>
               </tr>
             ) : (
               partidas.map((p, idx) => (
-                <tr key={idx} className="hover:bg-slate-800/40 transition">
-                  <td className="px-6 py-3 font-mono text-emerald-400 text-xs">{p.claveProducto}</td>
-                  <td className="px-6 py-3 font-medium text-white">{p.nombreProducto}</td>
-                  <td className="px-6 py-3 text-center">{p.cantidad} {p.umVenta}</td>
-                  <td className="px-6 py-3 text-right">${p.precioVenta.toFixed(2)}</td>
-                  <td className="px-6 py-3 text-right text-rose-400">${p.descuento.toFixed(2)}</td>
-                  <td className="px-6 py-3 text-right font-semibold text-white">${p.importe.toFixed(2)}</td>
-                  <td className="px-6 py-3 text-center">
+                <tr key={idx} className="hover:bg-slate-50/80 transition">
+                  <td className="px-6 py-3.5 font-mono text-blue-600 font-semibold text-xs">{p.claveProducto}</td>
+                  <td className="px-6 py-3.5 font-medium text-slate-900">{p.nombreProducto}</td>
+                  <td className="px-6 py-3.5 text-center text-slate-600">{p.cantidad} {p.umVenta}</td>
+                  <td className="px-6 py-3.5 text-right font-medium text-slate-600">${p.precioVenta.toFixed(2)}</td>
+                  <td className="px-6 py-3.5 text-right text-rose-600 font-medium">${p.descuento.toFixed(2)}</td>
+                  <td className="px-6 py-3.5 text-right font-bold text-slate-900">${p.importe.toFixed(2)}</td>
+                  <td className="px-6 py-3.5 text-center">
                     <button
                       onClick={() => handleEliminarPartida(idx)}
-                      className="text-xs text-rose-400 hover:text-rose-300 font-medium"
+                      className="text-xs text-rose-600 hover:text-rose-800 font-bold px-2 py-1 rounded hover:bg-rose-50 transition"
                     >
                       Quitar
                     </button>
@@ -309,19 +310,19 @@ export default function NuevoPedidoPage() {
         </table>
 
         {/* Resumen Total y Botón de Cobro */}
-        <div className="p-6 bg-slate-950 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-slate-400">
-            Total de partidas: <span className="font-semibold text-white">{partidas.length}</span>
+        <div className="p-6 bg-slate-50 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-sm text-slate-500 font-medium">
+            Total de partidas: <span className="font-bold text-slate-900">{partidas.length}</span>
           </div>
           <div className="flex items-center gap-6">
             <div className="text-right">
-              <span className="text-xs text-slate-400 block uppercase tracking-wider font-semibold">Total a Pagar</span>
-              <span className="text-3xl font-extrabold text-emerald-400">${totalPedido.toFixed(2)}</span>
+              <span className="text-xs text-slate-400 block uppercase tracking-wider font-bold">Total a Pagar</span>
+              <span className="text-3xl font-black text-emerald-600">${totalPedido.toFixed(2)}</span>
             </div>
             <button
               onClick={handleGuardarPedido}
               disabled={guardando || partidas.length === 0}
-              className="px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-bold text-base rounded-xl shadow-lg shadow-emerald-600/30 transition"
+              className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white font-bold text-base rounded-xl shadow-md shadow-blue-600/25 transition"
             >
               {guardando ? "Procesando..." : "Confirmar & Guardar Pedido"}
             </button>
