@@ -21,8 +21,6 @@ export interface Producto {
   precio_Venta_1: number;
   uM_Venta: string;
   tiene_Decimal: boolean;
-  inventario_Minimo?: string;
-  inventario_Maximo?: string;
 }
 
 export interface Cliente {
@@ -36,6 +34,68 @@ export interface Cliente {
   flDescuento: number;
 }
 
+export interface PartidaPedido {
+  claveProducto: string;
+  nombreProducto: string;
+  cantidad: number;
+  umVenta: string;
+  precioVenta: number;
+  descuento: number;
+  importe: number;
+  comentarioProducto?: string;
+}
+
+export interface GuardarPedidoPayload {
+  folio: string;
+  idCliente: number;
+  diasCredito: number;
+  metodoPago: number;
+  comentario: string;
+  partidas: PartidaPedido[];
+}
+
+export interface PedidoHistorial {
+  id_Pedido: number;
+  folio: string;
+  id: string;
+  id_Cajero: number;
+  fecha_Venta: string;
+  id_Cliente: number;
+  nombre_Cliente: string;
+  dias_Credito: number;
+  vencha_Vencimiento?: string;
+}
+
+export interface TicketData {
+  encabezado: {
+    id: number;
+    folio: string;
+    fecha: string;
+    hora: string;
+    condicion: string;
+    cajero: string;
+    comentario: string;
+  };
+  empresa: {
+    razonSocial: string;
+    rfc: string;
+    domicilio: string;
+    colonia: string;
+    cp: string;
+    telefono: string;
+  };
+  articulos: {
+    clave: string;
+    descripcion: string;
+    cantidad: string;
+    precio: number;
+    descuento: number;
+    importe: number;
+  }[];
+  total: number;
+  montoLetra: string;
+}
+
 export async function loginApi(usuario: string, contrasena: string): Promise<LoginResponse> {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
@@ -47,11 +107,7 @@ export async function loginApi(usuario: string, contrasena: string): Promise<Log
 
 export async function fetchMenuApi(token: string): Promise<any> {
   const res = await fetch(`${API_URL}/auth/menu`, {
-    method: "GET",
-    headers: {
-      "Authorization": `Bearer ${token}`,
-      "Content-Type": "application/json",
-    },
+    headers: { "Authorization": `Bearer ${token}` },
   });
   if (!res.ok) throw new Error("No se pudo obtener el menú del usuario");
   return res.json();
@@ -72,5 +128,33 @@ export async function fetchClientesApi(token: string, filtro?: string): Promise<
     headers: { "Authorization": `Bearer ${token}` }
   });
   if (!res.ok) throw new Error("Error al consultar clientes");
+  return res.json();
+}
+
+export async function guardarPedidoApi(token: string, payload: GuardarPedidoPayload) {
+  const res = await fetch(`${API_URL}/ventas/pedidos`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+  return res.json();
+}
+
+export async function fetchHistorialPedidosApi(token: string): Promise<PedidoHistorial[]> {
+  const res = await fetch(`${API_URL}/ventas/pedidos`, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al obtener historial de pedidos");
+  return res.json();
+}
+
+export async function fetchTicketPedidoApi(token: string, idPedido: number): Promise<TicketData> {
+  const res = await fetch(`${API_URL}/ventas/pedidos/${idPedido}/ticket`, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al obtener datos del ticket");
   return res.json();
 }
