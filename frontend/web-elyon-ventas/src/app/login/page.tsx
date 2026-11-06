@@ -43,8 +43,8 @@ export default function LoginPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-white tracking-tight">Elyon Ventas Web</h1>
-          <p className="text-sm text-slate-400 mt-1">Frutería del Puerto &bull; Cuentas por Cobrar</p>
+          <h1 className="text-2xl font-bold text-white tracking-tight">Altus Pv</h1>
+          <p className="text-sm text-slate-400 mt-1">Punto de Venta &bull; Cuentas por Cobrar</p>
         </div>
 
         {error && (

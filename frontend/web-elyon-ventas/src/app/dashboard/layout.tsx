@@ -52,7 +52,48 @@ export default function DashboardLayout({
     );
   }
 
-  const menuPadres = menuData?.MenuPadre || [];
+  const DEFAULT_MENU = [
+    {
+      PK_Menu: 100,
+      nombre: "Ventas y Pedidos",
+      MenuHijo: [
+        { PK_Menu: 101, nombre: "Captura de Pedidos", url: "/dashboard/pedidos/nuevo" },
+        { PK_Menu: 102, nombre: "Historial de Pedidos", url: "/dashboard/pedidos" },
+      ]
+    },
+    {
+      PK_Menu: 200,
+      nombre: "Catálogos",
+      MenuHijo: [
+        { PK_Menu: 201, nombre: "Productos", url: "/dashboard/catalogos/productos" },
+        { PK_Menu: 202, nombre: "Clientes", url: "/dashboard/catalogos/clientes" },
+      ]
+    },
+    {
+      PK_Menu: 300,
+      nombre: "Cuentas por Cobrar",
+      MenuHijo: [
+        { PK_Menu: 301, nombre: "Cobranza y Abonos", url: "/dashboard/cobranza" },
+        { PK_Menu: 302, nombre: "Historial de Pagos", url: "/dashboard/cobranza/historial" },
+      ]
+    },
+    {
+      PK_Menu: 400,
+      nombre: "Reportes",
+      MenuHijo: [
+        { PK_Menu: 401, nombre: "Movimientos y Auditoría", url: "/dashboard/reportes/movimientos" },
+      ]
+    },
+    {
+      PK_Menu: 500,
+      nombre: "Seguridad",
+      MenuHijo: [
+        { PK_Menu: 501, nombre: "Usuarios y Permisos", url: "/dashboard/seguridad/usuarios" },
+      ]
+    }
+  ];
+
+  const menuPadres = (menuData?.MenuPadre && menuData.MenuPadre.length > 0) ? menuData.MenuPadre : DEFAULT_MENU;
 
   return (
     <div className="min-h-screen flex bg-slate-950 text-slate-100">
@@ -62,32 +103,32 @@ export default function DashboardLayout({
           {/* Header del sidebar */}
           <div className="h-16 flex items-center px-6 border-b border-slate-800 gap-3">
             <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center font-bold text-white shadow-md shadow-emerald-600/30">
-              E
+              A
             </div>
             <div>
-              <span className="font-semibold text-white tracking-wide text-sm block">Elyon Ventas</span>
-              <span className="text-[10px] text-emerald-400 font-medium uppercase tracking-wider">Web Edition</span>
+              <span className="font-semibold text-white tracking-wide text-sm block">Altus Pv</span>
+              <span className="text-[10px] text-emerald-400 font-medium uppercase tracking-wider">Punto de Venta Web</span>
             </div>
           </div>
 
-          {/* Menú de navegación dinámico desde sp_MenuPorUsuario */}
-          <nav className="p-4 space-y-1">
-            <div className="px-3 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+          {/* Menú de navegación */}
+          <nav className="p-4 space-y-3">
+            <div className="px-3 py-1 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
               Módulos Activos
             </div>
 
             {menuPadres.map((padre: any) => (
               <div key={padre.PK_Menu} className="mb-2">
-                <div className="px-3 py-1.5 text-xs font-medium text-slate-400 flex items-center justify-between">
+                <div className="px-3 py-1 text-xs font-semibold text-emerald-400 uppercase tracking-wider flex items-center justify-between">
                   <span>{padre.vchMenu || padre.nombre}</span>
                 </div>
                 {padre.MenuHijo && padre.MenuHijo.length > 0 && (
-                  <div className="ml-2 space-y-0.5 border-l border-slate-800 pl-2">
+                  <div className="mt-1 space-y-0.5 border-l border-slate-800 pl-2">
                     {padre.MenuHijo.map((hijo: any) => (
                       <a
                         key={hijo.PK_Menu}
                         href={hijo.url || "#"}
-                        className="block px-3 py-1.5 text-sm rounded-md text-slate-300 hover:text-white hover:bg-slate-800 transition"
+                        className="block px-3 py-1.5 text-xs font-medium rounded-md text-slate-300 hover:text-white hover:bg-slate-800 transition"
                       >
                         {hijo.vchMenu || hijo.nombre}
                       </a>

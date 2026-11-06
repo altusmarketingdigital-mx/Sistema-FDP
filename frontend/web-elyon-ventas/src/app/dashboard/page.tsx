@@ -2,9 +2,9 @@ export default function DashboardHome() {
   return (
     <div className="space-y-6">
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-sm">
-        <h3 className="text-xl font-bold text-white mb-2">Bienvenido a Elyon Ventas Web</h3>
+        <h3 className="text-xl font-bold text-white mb-2">Bienvenido a Altus Pv</h3>
         <p className="text-slate-400 text-sm max-w-2xl leading-relaxed">
-          El sistema se ha conectado exitosamente con la arquitectura REST .NET 8 y la base de datos de seguridad <code className="text-emerald-400 bg-slate-800 px-1.5 py-0.5 rounded">ELYON_dbPermisosV</code>. El menú lateral se genera dinámicamente de acuerdo con el perfil del usuario activo.
+          Sistema integral de Punto de Venta, Pedidos, Facturación, Inventarios y Cuentas por Cobrar. Navega a través de los módulos disponibles en el menú lateral.
         </p>
       </div>
 
