@@ -1,0 +1,3002 @@
+[
+  {
+    "pK_Id_Cliente": 3485,
+    "vchNombre": "ABARROTES MAGITRONIC",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3329,
+    "vchNombre": "ALFREDO CUADRO TORTILLERIA LA ESTRELLA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2298,
+    "vchNombre": "ARM J.SIERRA MENDEZ PO-141",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 316,
+    "vchNombre": "BAR CANADIENSE MICHELANDIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 2247,
+    "vchNombre": "CLINICA HOSPITAL RICARDO FLORES MAGON",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3705,
+    "vchNombre": "COCINA ECONOMICA PUENTES CUATES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1940,
+    "vchNombre": "DANTE  TRANSITO",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2746,
+    "vchNombre": "DESAYUNOS TU PARADA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1102,
+    "vchNombre": "ESC. SEC. TEC. NO. 75 VALERIO TRUJANO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1630,
+    "vchNombre": "LILIALA GUERA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3227,
+    "vchNombre": "MARCO OROZCO E2 PUBLICIDAD",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2897,
+    "vchNombre": "MARIBEL RUIZ CERVETODO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1823,
+    "vchNombre": "MARISCOS LA PALAPA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3559,
+    "vchNombre": "TACOS DE GUISADO LAS CODORNICES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2946,
+    "vchNombre": "*AMPLIACION JARENE*",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3111,
+    "vchNombre": "*VALLE DEL TECNOLOGICO*",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1448,
+    "vchNombre": "82 BATALLON DE INFANTERIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3283,
+    "vchNombre": "AB OSCARIN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2601,
+    "vchNombre": "AB. EL BARATO DE LA COL. FLOR D",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3183,
+    "vchNombre": "AB. LA ESQUINITA*",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2097,
+    "vchNombre": "AB. VICTORIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3025,
+    "vchNombre": "AB. ZUHELI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1972,
+    "vchNombre": "ABA. ALONDRA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3572,
+    "vchNombre": "ABA. ANDREA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3479,
+    "vchNombre": "ABA. ANY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2508,
+    "vchNombre": "ABA. CHIO RUTA GUACAMAYAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3409,
+    "vchNombre": "ABA. DANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2338,
+    "vchNombre": "ABA. DOÑA CHELY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 147,
+    "vchNombre": "ABA. EL CHICLE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3421,
+    "vchNombre": "ABA. EL PIRAÑO  PLAYA AZU",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 3392,
+    "vchNombre": "ABA. ERICK",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1976,
+    "vchNombre": "ABA. ITALIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3782,
+    "vchNombre": "ABA. LA COSTEÑITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2568,
+    "vchNombre": "ABA. LA PASTORCITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3010,
+    "vchNombre": "ABA. LIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2424,
+    "vchNombre": "ABA. PAULA RUTA LAZARO C.",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2445,
+    "vchNombre": "ABA. ROSITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2281,
+    "vchNombre": "ABA. Y FRUTAS AYALA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2931,
+    "vchNombre": "ABA. YURI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2540,
+    "vchNombre": "ABA.CORREA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3269,
+    "vchNombre": "ABA.LA PROVIDENCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3785,
+    "vchNombre": "ABA.MAGITRONI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 11,
+    "vchNombre": "ABARROTERA DEL DUERO SA DE CV",
+    "vchRFC": "ADU800131T10",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2659,
+    "vchNombre": "ABARROTES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 15,
+    "vchNombre": "ABARROTES 3 HERMANOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 999,
+    "vchNombre": "ABARROTES 3 REYES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2423,
+    "vchNombre": "ABARROTES ABRIL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3478,
+    "vchNombre": "ABARROTES ACAPULCO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1199,
+    "vchNombre": "ABARROTES ADRIANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2236,
+    "vchNombre": "ABARROTES AGUILAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2443,
+    "vchNombre": "ABARROTES AGUILAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2012,
+    "vchNombre": "ABARROTES ALMENDRO 1",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3709,
+    "vchNombre": "ABARROTES ANGEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 3019,
+    "vchNombre": "ABARROTES ANITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 3
+  },
+  {
+    "pK_Id_Cliente": 1579,
+    "vchNombre": "ABARROTES ANTES ABARRO",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2446,
+    "vchNombre": "ABARROTES ATENA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3771,
+    "vchNombre": "ABARROTES BACIDA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2410,
+    "vchNombre": "ABARROTES BELLA VISTA DON RAUL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3139,
+    "vchNombre": "ABARROTES BENAVIDES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 979,
+    "vchNombre": "ABARROTES BERE CALLE 21 DE MARZO MAN 8",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2988,
+    "vchNombre": "ABARROTES BETO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 19,
+    "vchNombre": "ABARROTES CAMPOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 3
+  },
+  {
+    "pK_Id_Cliente": 2883,
+    "vchNombre": "ABARROTES CARLOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2814,
+    "vchNombre": "ABARROTES CESAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3091,
+    "vchNombre": "ABARROTES CESAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2912,
+    "vchNombre": "ABARROTES CHELY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2926,
+    "vchNombre": "ABARROTES CHISESA 2",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1813,
+    "vchNombre": "ABARROTES CHISESA1",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2448,
+    "vchNombre": "ABARROTES CINDY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2197,
+    "vchNombre": "ABARROTES CLARITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1956,
+    "vchNombre": "ABARROTES CORNEJO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2232,
+    "vchNombre": "ABARROTES CRISTIAN CASTRO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2874,
+    "vchNombre": "ABARROTES DANIEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3167,
+    "vchNombre": "ABARROTES DANY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 20,
+    "vchNombre": "ABARROTES DON SIMON",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1973,
+    "vchNombre": "ABARROTES DURANGO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2149,
+    "vchNombre": "ABARROTES ECONOYOLA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1215,
+    "vchNombre": "ABARROTES EDITH",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 3
+  },
+  {
+    "pK_Id_Cliente": 2395,
+    "vchNombre": "ABARROTES EDY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3444,
+    "vchNombre": "ABARROTES EL CHINO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 985,
+    "vchNombre": "ABARROTES EL GITANO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2880,
+    "vchNombre": "ABARROTES EL GUERO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2820,
+    "vchNombre": "ABARROTES EL KILI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 23,
+    "vchNombre": "ABARROTES EL PALOMAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 5
+  },
+  {
+    "pK_Id_Cliente": 1654,
+    "vchNombre": "ABARROTES EL TORITO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2489,
+    "vchNombre": "ABARROTES EMILY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3294,
+    "vchNombre": "ABARROTES EMMANUEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 1461,
+    "vchNombre": "ABARROTES ENIAM",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3097,
+    "vchNombre": "ABARROTES ERICKA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2719,
+    "vchNombre": "ABARROTES ERICKA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1942,
+    "vchNombre": "ABARROTES ESMERALDA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3527,
+    "vchNombre": "ABARROTES EVELIN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2884,
+    "vchNombre": "ABARROTES FACTOR TIENDA DEL GÑERO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 12
+  },
+  {
+    "pK_Id_Cliente": 3317,
+    "vchNombre": "ABARROTES FAJARDO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 12
+  },
+  {
+    "pK_Id_Cliente": 1586,
+    "vchNombre": "ABARROTES FANY",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2855,
+    "vchNombre": "ABARROTES GAEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3376,
+    "vchNombre": "ABARROTES GALEANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1835,
+    "vchNombre": "ABARROTES GARCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 532,
+    "vchNombre": "ABARROTES GAVIOTA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3738,
+    "vchNombre": "ABARROTES GEMA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2198,
+    "vchNombre": "ABARROTES GEYMA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2967,
+    "vchNombre": "ABARROTES GODOY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2805,
+    "vchNombre": "ABARROTES IVADIS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2745,
+    "vchNombre": "ABARROTES JAFFET",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 282,
+    "vchNombre": "ABARROTES JASSET",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1838,
+    "vchNombre": "ABARROTES JOHANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 949,
+    "vchNombre": "ABARROTES JUANITO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3644,
+    "vchNombre": "ABARROTES JULIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3118,
+    "vchNombre": "ABARROTES KAREN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1260,
+    "vchNombre": "ABARROTES KARINA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 63,
+    "vchNombre": "ABARROTES KEVIN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 15
+  },
+  {
+    "pK_Id_Cliente": 3024,
+    "vchNombre": "ABARROTES LA ARIENSE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3772,
+    "vchNombre": "ABARROTES LA ARIENSE 2 PLAYA AZUL GUADALUPE P",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 773,
+    "vchNombre": "ABARROTES LA FAVORITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2859,
+    "vchNombre": "ABARROTES LA GLORIETA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2860,
+    "vchNombre": "ABARROTES LA GLORIETA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3639,
+    "vchNombre": "ABARROTES LA MORENA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3484,
+    "vchNombre": "ABARROTES LA PLAYA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 276,
+    "vchNombre": "ABARROTES LA POPULAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3045,
+    "vchNombre": "ABARROTES LA TARASQUITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2319,
+    "vchNombre": "ABARROTES LA VALENCIANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3259,
+    "vchNombre": "ABARROTES LAS 3 D",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2240,
+    "vchNombre": "ABARROTES LAS BODEGAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2463,
+    "vchNombre": "ABARROTES LIBRAMIENTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3353,
+    "vchNombre": "ABARROTES LILI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3718,
+    "vchNombre": "ABARROTES LILI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2200,
+    "vchNombre": "ABARROTES LILIAN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2780,
+    "vchNombre": "ABARROTES LIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2499,
+    "vchNombre": "ABARROTES LIZ CAMPAMENTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 839,
+    "vchNombre": "ABARROTES LIZETH",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 1217,
+    "vchNombre": "ABARROTES LOS 3 REYES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2876,
+    "vchNombre": "ABARROTES LOS CUATES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2202,
+    "vchNombre": "ABARROTES LOS JAROCHO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3101,
+    "vchNombre": "ABARROTES LUCY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1281,
+    "vchNombre": "ABARROTES LUCY",
+    "vchRFC": "NWM9709244W4",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1808,
+    "vchNombre": "ABARROTES LUCY JANITZI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2611,
+    "vchNombre": "ABARROTES LUCY(ANTES ABARROTES PERA)",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 3
+  },
+  {
+    "pK_Id_Cliente": 2703,
+    "vchNombre": "ABARROTES LULU",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3460,
+    "vchNombre": "ABARROTES LYS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1576,
+    "vchNombre": "ABARROTES MARBA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 948,
+    "vchNombre": "ABARROTES MARIA LUISA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3087,
+    "vchNombre": "ABARROTES MARIFER",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1763,
+    "vchNombre": "ABARROTES MARITZA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2413,
+    "vchNombre": "ABARROTES MARY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3006,
+    "vchNombre": "ABARROTES MIGUELITO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3173,
+    "vchNombre": "ABARROTES MIRANDA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3109,
+    "vchNombre": "ABARROTES MIRIAM",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3117,
+    "vchNombre": "ABARROTES MOELY FTE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3288,
+    "vchNombre": "ABARROTES NAYELI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3031,
+    "vchNombre": "ABARROTES NELY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2451,
+    "vchNombre": "ABARROTES NORMA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 255,
+    "vchNombre": "ABARROTES OKY-AVENIDA 1",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3126,
+    "vchNombre": "ABARROTES PRADERAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2478,
+    "vchNombre": "ABARROTES PROGRESO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1873,
+    "vchNombre": "ABARROTES RAFITA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1499,
+    "vchNombre": "ABARROTES RAMIREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3701,
+    "vchNombre": "ABARROTES RENATA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3441,
+    "vchNombre": "ABARROTES RENATA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 91,
+    "vchNombre": "ABARROTES REYES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 311,
+    "vchNombre": "ABARROTES ROBLES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2484,
+    "vchNombre": "ABARROTES RUIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1009,
+    "vchNombre": "ABARROTES SANTIAGO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2280,
+    "vchNombre": "ABARROTES SOFI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3783,
+    "vchNombre": "ABARROTES SOTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3812,
+    "vchNombre": "ABARROTES SOTO LA PAROTA 44 B",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2150,
+    "vchNombre": "ABARROTES TARIACURI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3814,
+    "vchNombre": "ABARROTES TRANS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2701,
+    "vchNombre": "ABARROTES TRES REYNAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 250
+  },
+  {
+    "pK_Id_Cliente": 3289,
+    "vchNombre": "ABARROTES TURYAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3414,
+    "vchNombre": "ABARROTES URIEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3185,
+    "vchNombre": "ABARROTES URIEL 2",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1001,
+    "vchNombre": "ABARROTES URUAPAN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1376,
+    "vchNombre": "ABARROTES VALENCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3209,
+    "vchNombre": "ABARROTES VER",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2049,
+    "vchNombre": "ABARROTES VERO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2389,
+    "vchNombre": "ABARROTES VERO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3386,
+    "vchNombre": "ABARROTES VIGORY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2825,
+    "vchNombre": "ABARROTES VIÑA DEL MAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3115,
+    "vchNombre": "ABARROTES VIVI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3474,
+    "vchNombre": "ABARROTES Y TORTILERIA PERLIT",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 146,
+    "vchNombre": "ABARROTES YAJAYRA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 2638,
+    "vchNombre": "ABARROTES YATZIL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 250
+  },
+  {
+    "pK_Id_Cliente": 2182,
+    "vchNombre": "ABARROTES YENI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3175,
+    "vchNombre": "ABARROTES YENI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 332,
+    "vchNombre": "ABARROTES YENI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1811,
+    "vchNombre": "ABARROTES YENIFER",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 156,
+    "vchNombre": "ABARROTES YOBANI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 3781,
+    "vchNombre": "ABARROTES YOLA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3127,
+    "vchNombre": "ABARROTES YONY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3166,
+    "vchNombre": "ABARROTES YUNUEN*LUCIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3542,
+    "vchNombre": "ABARROTES YURI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2203,
+    "vchNombre": "ABARROTES ZAVALA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2372,
+    "vchNombre": "ABARROTES ZEPEDA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2477,
+    "vchNombre": "ABARROTES ZOEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 312,
+    "vchNombre": "ABARROTES ZULMA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2490,
+    "vchNombre": "ABASTOS Y DISTRIBUCIONES INSTITUCIONALES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2079,
+    "vchNombre": "ABEL TAPIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2033,
+    "vchNombre": "ABEL TORRES ROMERO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 3202,
+    "vchNombre": "ABRAHAM RAMIREZ TINOCO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3349,
+    "vchNombre": "ABRAHAM SALTO GRANADOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1320,
+    "vchNombre": "ABRAHAM TORRES",
+    "vchRFC": "ATR710803298",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 7,
+    "vchNombre": "ACCOR SERVICIOS EMPRESARIALES SA DE CV",
+    "vchRFC": "ASE930924SS7",
+    "intDiasCredito": 30
+  },
+  {
+    "pK_Id_Cliente": 1147,
+    "vchNombre": "ACCTRA S.A DE C.V.",
+    "vchRFC": "CMT0502027W6",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 365,
+    "vchNombre": "ADALILA OCHOA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 4835,
+    "vchNombre": "ADAN PINZON TRUJILLO MARISQUERIA COSTA BRAVA",
+    "vchRFC": "0",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1863,
+    "vchNombre": "ADAN SUAREZ IXTAPA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3348,
+    "vchNombre": "ADELA HERNANDEZ DE LOS SANTOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2781,
+    "vchNombre": "ADELAIDA GUTIERREZ VILLA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1681,
+    "vchNombre": "ADI DUARTE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2172,
+    "vchNombre": "ADILENE PEREZ A.",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3809,
+    "vchNombre": "ADILENE SAUCEDO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1497,
+    "vchNombre": "ADMINISTRACION DE FONDOS MINEROS SA DE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 907,
+    "vchNombre": "ADMINISTRACION PORTUARIA INTEGRAL DE LA",
+    "vchRFC": "API931215IX4",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 933,
+    "vchNombre": "ADOLFINA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 3079,
+    "vchNombre": "ADOLFINA GOMEZPLAYA AZUL(BODEGA)",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 397,
+    "vchNombre": "ADOLFINA SALGADOMINI. AGUILILLA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 189,
+    "vchNombre": "ADOLFO AGUIRRE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2533,
+    "vchNombre": "ADOLFO CESAR MARTINEZ RUIZ ESPARZA FLYZBOY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2599,
+    "vchNombre": "ADOLFO IBARRA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2595,
+    "vchNombre": "ADOLFO OLIVIER",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3549,
+    "vchNombre": "ADOLFO ROJAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1560,
+    "vchNombre": "ADOLFO TORRES JIMENEZ",
+    "vchRFC": "TOJA780109TH6",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 647,
+    "vchNombre": "ADR-15 DRAGA SAN IGNACIO",
+    "vchRFC": "SMA850101TQ4",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 288,
+    "vchNombre": "ADRIAN TORRES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3469,
+    "vchNombre": "ADRIANA AGUILAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2426,
+    "vchNombre": "ADRIANA HERRERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2336,
+    "vchNombre": "ADRIANA MUÑIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3820,
+    "vchNombre": "ADRIANA NOYOLA CHAVEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2014,
+    "vchNombre": "ADRIANA RODRIGUEZ HINOJOSA - LAS BRASAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1319,
+    "vchNombre": "ADRIANA VAZQUEZ VALDOVINOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 327,
+    "vchNombre": "ADRIANA VICHI",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3207,
+    "vchNombre": "ADRIEL BANDERAS BARRERA CALLE.SORJUANA INEZ D",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2851,
+    "vchNombre": "AGRONOPALES DE SINALOA SA DE CV",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 887,
+    "vchNombre": "AGROPECUARIA REYCAS SA DE CV",
+    "vchRFC": "ARE0403254M3",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 602,
+    "vchNombre": "AGROPECUARIA REYCAS SA DE CV",
+    "vchRFC": "ARE0403254M3",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1747,
+    "vchNombre": "AGRUPAMIENTO DE SERVICIOS DE INFANTERIA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1933,
+    "vchNombre": "AGUA NATURAL PLUS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3088,
+    "vchNombre": "AGUAS EL CHOCORROL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 38,
+    "vchNombre": "AGUEDA NOYOLA MEDEL",
+    "vchRFC": "NOMA590205Q65",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1994,
+    "vchNombre": "AGUSTIN ESCOBAR JULIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3472,
+    "vchNombre": "AGUSTIN GARCIA   GUACAMAYAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2827,
+    "vchNombre": "AGUSTIN GARIBAY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 96,
+    "vchNombre": "AGUSTIN GONZALEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 2022,
+    "vchNombre": "AGUSTIN MERCADO LC",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 644,
+    "vchNombre": "AGUSTIN REYES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 821,
+    "vchNombre": "AGUSTINA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 897,
+    "vchNombre": "AGUSTINA GONZALEZ DE VARGASABA. VARGAS PLAY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2105,
+    "vchNombre": "AGUSTINA LEZMAR (PAST.ENFRENTE DEL TEC)",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 521,
+    "vchNombre": "AGUSTINA PEREZ GARCIA",
+    "vchRFC": "PEGA540528MJA",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2858,
+    "vchNombre": "AHOGADICTAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 3250,
+    "vchNombre": "AIDE CHAVARRIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3802,
+    "vchNombre": "AILEEN VALENCIA CORZA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2152,
+    "vchNombre": "AISES PIMENTEL VAZQUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2726,
+    "vchNombre": "ALAN DIAZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1958,
+    "vchNombre": "ALAN ENCARNACION BLAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2657,
+    "vchNombre": "ALAN SALVADOR LEZMA CABELLO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 304,
+    "vchNombre": "ALBERTA SANTIAGO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1294,
+    "vchNombre": "ALBERTO VISOSO BASABE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1113,
+    "vchNombre": "ALBINA BARON",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3745,
+    "vchNombre": "ALBINA BARRETO SALGADO COMUNAL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3193,
+    "vchNombre": "ALDO GONZALEZ BECERRIL ( SKY )",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 4
+  },
+  {
+    "pK_Id_Cliente": 3651,
+    "vchNombre": "ALDO GONZALEZ GONZALEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3335,
+    "vchNombre": "ALEJANDRA BADILLO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 6,
+    "vchNombre": "ALEJANDRA FERRER",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 827,
+    "vchNombre": "ALEJANDRA HERNANDEZ CUEVAS**CAJERA**",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 488,
+    "vchNombre": "ALEJANDRA IBARRA HERNANDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 435,
+    "vchNombre": "ALEJANDRA LOZANO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 3292,
+    "vchNombre": "ALEJANDRA NIETO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1122,
+    "vchNombre": "ALEJANDRA PATRACA ALOR",
+    "vchRFC": "TCI031201719",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1381,
+    "vchNombre": "ALEJANDRA SAAVEDRA JACINTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1842,
+    "vchNombre": "ALEJANDRA SOLIS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 661,
+    "vchNombre": "ALEJANDRA SUAREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 5
+  },
+  {
+    "pK_Id_Cliente": 2690,
+    "vchNombre": "ALEJANDRO ABURTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1829,
+    "vchNombre": "ALEJANDRO BARAJAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 374,
+    "vchNombre": "ALEJANDRO BARRERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 216,
+    "vchNombre": "ALEJANDRO BELLO MAGAÑA",
+    "vchRFC": "BEMA6211277G9",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1090,
+    "vchNombre": "ALEJANDRO DE JOSE HERRERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 858,
+    "vchNombre": "ALEJANDRO GONZALEZ ALVARADO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2273,
+    "vchNombre": "ALEJANDRO MARCIAL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1297,
+    "vchNombre": "ALEJANDRO MARO NATTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 181,
+    "vchNombre": "ALEJANDRO ROJAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1229,
+    "vchNombre": "ALEJANDRO SOLIS OLEA POLLO FRIZZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2467,
+    "vchNombre": "ALEJANDRO VAQUERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 678,
+    "vchNombre": "ALEJANDRO XOCHITEMPA SACRISTAN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2262,
+    "vchNombre": "ALEN ENRIQUE NAVARRO BARRAGAN SANA-HORITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3264,
+    "vchNombre": "ALEN ENRIQUE NAVARRO WEYQUETACO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 393,
+    "vchNombre": "ALEX OMAR VALENCIA REYES",
+    "vchRFC": "VARA761203L81",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1043,
+    "vchNombre": "ALEXANDER RODRIGUEZ DOMINGUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2355,
+    "vchNombre": "ALEXIS BOJORQUEZ ROSALES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2035,
+    "vchNombre": "ALEXIS MERCADO ROJAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2390,
+    "vchNombre": "ALEXIS PEREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3447,
+    "vchNombre": "ALEXIS VAZQUEZ MUÑOZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3463,
+    "vchNombre": "ALFI VARGAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1489,
+    "vchNombre": "ALFONSO CASIMIRO GONZALEZ",
+    "vchRFC": "SIM0906157U0",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2346,
+    "vchNombre": "ALFONSO CECEÑA PERALTA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 416,
+    "vchNombre": "ALFONSO DE LA CRUZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 540,
+    "vchNombre": "ALFONSO ROJAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 1719,
+    "vchNombre": "ALFONSO SOLORIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2589,
+    "vchNombre": "ALFREDA MACHUCA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 417,
+    "vchNombre": "ALFREDO ALVAREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 3703,
+    "vchNombre": "ALFREDO BEJAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1646,
+    "vchNombre": "ALFREDO CALVARIO",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3023,
+    "vchNombre": "ALFREDO HERNANDEZ ALVAREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3022,
+    "vchNombre": "ALFREDO HERNANDEZ ALVAREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1432,
+    "vchNombre": "ALFREDO LOPEZA AGUILAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1118,
+    "vchNombre": "ALFREDO NAVA",
+    "vchRFC": "RIZC5612085L1",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 132,
+    "vchNombre": "ALFREDO RAMOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 9
+  },
+  {
+    "pK_Id_Cliente": 2353,
+    "vchNombre": "ALFREDO RUIZ MARROQUIN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3530,
+    "vchNombre": "ALFREDO SOBERANIS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3499,
+    "vchNombre": "ALICIA ARIAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1150,
+    "vchNombre": "ALICIA BAÑOS DIAZ",
+    "vchRFC": "ACC980717BA7",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 3,
+    "vchNombre": "ALICIA BENITEZ AGUILAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3596,
+    "vchNombre": "ALICIA CERPAS GARCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1179,
+    "vchNombre": "ALICIA HERNANDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3373,
+    "vchNombre": "ALICIA RAMIREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3340,
+    "vchNombre": "ALICIA TORRES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1578,
+    "vchNombre": "ALIDA FLORES AMBRIZ",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3002,
+    "vchNombre": "ALIDA OLIVAREZ TORRES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1927,
+    "vchNombre": "ALIJUZA DE MEXICO SA DE CV",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 30
+  },
+  {
+    "pK_Id_Cliente": 585,
+    "vchNombre": "ALIMENTOS FINOS DE OCCIDENTE SA DE CV MACDONA",
+    "vchRFC": "AFO920203UG3",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 2978,
+    "vchNombre": "ALIMENTOS LZC",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2621,
+    "vchNombre": "ALIMENTOS SIGLO XXI S DE RL DE CV",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1051,
+    "vchNombre": "ALMA DEL OXXO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3220,
+    "vchNombre": "ALMA DELIA GAONA MATEO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2511,
+    "vchNombre": "ALMA ERENDIRA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1361,
+    "vchNombre": "ALMA GARCIA JUAREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3267,
+    "vchNombre": "ALMA HAYAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2544,
+    "vchNombre": "ALMA IRENE PEREZ ESPAÑA AND. CAPRICORNIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3628,
+    "vchNombre": "ALMA LETICIA DIAZ VELEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2388,
+    "vchNombre": "ALMA LUCIA MENDEZ VIEYRA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3358,
+    "vchNombre": "ALMA ROSA HERNANDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1745,
+    "vchNombre": "ALMA ROSA MORALES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1149,
+    "vchNombre": "ALMA ROSA NUÑEZ BUSTOS",
+    "vchRFC": "MERR520318TS3",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 961,
+    "vchNombre": "ALONDRA BERENICE TINOCO HERRERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 1856,
+    "vchNombre": "ALONDRA SOTO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3053,
+    "vchNombre": "ALONDRA YURIDIA GARCIA DELGADO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 306,
+    "vchNombre": "ALPA ALIMENTOS DEL PACIFICO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1148,
+    "vchNombre": "ALTAGRACIA VARGAS",
+    "vchRFC": "RARI741015168",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 592,
+    "vchNombre": "ALVARO CORNEJO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 2265,
+    "vchNombre": "AMADA RUIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 763,
+    "vchNombre": "AMADO HEREDIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 1963,
+    "vchNombre": "AMADO MEJIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2862,
+    "vchNombre": "AMADO PIÑA ROSSTIMEX",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1668,
+    "vchNombre": "AMADO QUITERIO FIGUEROA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1561,
+    "vchNombre": "AMALIA GARCIA JUAREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 807,
+    "vchNombre": "AMALIA SOTO OLIVO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2392,
+    "vchNombre": "AMANDA AGUILERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 117,
+    "vchNombre": "AMANDO LOPEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 92,
+    "vchNombre": "AMARISCOS LA RED",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 5
+  },
+  {
+    "pK_Id_Cliente": 1735,
+    "vchNombre": "AMAYRANI AYALA X LAS PESCADERIAS",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 18,
+    "vchNombre": "AMAYRANI CATALAN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2468,
+    "vchNombre": "AMAYRANI MEZA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 717,
+    "vchNombre": "AMELIA MOLINA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3435,
+    "vchNombre": "AMERICA TORRES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1938,
+    "vchNombre": "AMPARO PADILLA ABASOLO",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3012,
+    "vchNombre": "AMPLIACION FAMILIAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2106,
+    "vchNombre": "AMPORS DE MEXICO S.A. DE C.V.",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2546,
+    "vchNombre": "AMPORTS DE MEXICO S.A DE C.V",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 60,
+    "vchNombre": "ANA ALEJANDRA MACHUCA NAVARRO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3680,
+    "vchNombre": "ANA DELIA CANO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3795,
+    "vchNombre": "ANA GUERRERO ACEVES",
+    "vchRFC": "ECE830923MJ2",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 3662,
+    "vchNombre": "ANA IRIS PASCACIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2414,
+    "vchNombre": "ANA JESSICA RAMOS MALDONADO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2773,
+    "vchNombre": "ANA KAREN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1605,
+    "vchNombre": "ANA KAREN VARGAS SANTIAGO ABA. KAREN",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3695,
+    "vchNombre": "ANA LAURA ARELLANO ROBLES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2832,
+    "vchNombre": "ANA LETICIA ZAVALA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2607,
+    "vchNombre": "ANA LIDEY FERNANDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3319,
+    "vchNombre": "ANA MARIA BARAJAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 358,
+    "vchNombre": "ANA MARIA CORREA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3368,
+    "vchNombre": "ANA MARIA MACEDO RODRIGUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1553,
+    "vchNombre": "ANA MARIA ORTIZ RUIZ",
+    "vchRFC": "OIRA4907219V6",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1236,
+    "vchNombre": "ANA MARIA RUIZ QUINTANA",
+    "vchRFC": "BESB750219CR2",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1809,
+    "vchNombre": "ANA MARTINEZ",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3428,
+    "vchNombre": "ANA PACHECO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3480,
+    "vchNombre": "ANA PATRICIA GARCIA  CASA BIES PORTON  BLANCO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 2940,
+    "vchNombre": "ANA RAZO CAMARILLO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 659,
+    "vchNombre": "ANA SOLIS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3453,
+    "vchNombre": "ANABEL RAMIREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 916,
+    "vchNombre": "ANADELIA SALAMANCA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3789,
+    "vchNombre": "ANAHI PLACIDO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1691,
+    "vchNombre": "ANAI VEGA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2782,
+    "vchNombre": "ANALI MAYO HERNANDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2472,
+    "vchNombre": "ANALID RAMIREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1096,
+    "vchNombre": "ANASTACIO",
+    "vchRFC": "EURJ670821HW1",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2834,
+    "vchNombre": "ANAYENCI VAZQUEZ PEREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3603,
+    "vchNombre": "ANCELMO MENDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 751,
+    "vchNombre": "ANDREA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2432,
+    "vchNombre": "ANDREA LEYVA CARDENAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1164,
+    "vchNombre": "ANDREAS MUTCHER",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2594,
+    "vchNombre": "ANDRES ABARCA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2046,
+    "vchNombre": "ANDRES ALVEAR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3776,
+    "vchNombre": "ANDRES BENITEZ CALDERON",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1056,
+    "vchNombre": "ANDRES CERVANTES PACHECO",
+    "vchRFC": "RAPJ8512214M5",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3822,
+    "vchNombre": "ANEL SALVATIERRA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1632,
+    "vchNombre": "ANGEL AGUILA DIAZ",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 4,
+    "vchNombre": "ANGEL ARREDONDO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1797,
+    "vchNombre": "ANGEL MORENO PEÑA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2369,
+    "vchNombre": "ANGEL MUÑOZCAFE. TEC. 2",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 3243,
+    "vchNombre": "ANGEL SANCHEZ BLANCO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2126,
+    "vchNombre": "ANGELA BRISEÑO LOPEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2901,
+    "vchNombre": "ANGELES HERNANDEZ SANCHEZ L",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 110,
+    "vchNombre": "ANGELES KARINA ROBLES HERNANDEZ",
+    "vchRFC": "ROHA7505141U7",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 2208,
+    "vchNombre": "ANGELICA BARRERA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2815,
+    "vchNombre": "ANGELICA BETANCUR SEGURA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2188,
+    "vchNombre": "ANGELICA CALDERON VILLANUEVA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2920,
+    "vchNombre": "ANGELICA CHAVEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2741,
+    "vchNombre": "ANGELICA CORTEZ MENDOZA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1819,
+    "vchNombre": "ANGELICA GARCIA GARCIA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 1349,
+    "vchNombre": "ANGELICA GARCIA PEDRAZO",
+    "vchRFC": "SMA850101TQ4",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2436,
+    "vchNombre": "ANGELICA LANDA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 771,
+    "vchNombre": "ANGELICA MUÑOZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3132,
+    "vchNombre": "ANGELICA RODRIGUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3393,
+    "vchNombre": "ANGELICA VARGAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3591,
+    "vchNombre": "ANGELINA MARTINEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 340,
+    "vchNombre": "ANGELITA RODRIGUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1521,
+    "vchNombre": "ANITA CRUZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1617,
+    "vchNombre": "ANITA MENDEZ",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1590,
+    "vchNombre": "ANSELMO VIEYRA ESTRADA",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2963,
+    "vchNombre": "ANTOJITOS LA CHULA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 2145,
+    "vchNombre": "ANTOJITOS MITZY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1594,
+    "vchNombre": "ANTOJITOS MONSE",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 942,
+    "vchNombre": "ANTONIA ALGARA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 40,
+    "vchNombre": "ANTONIA GARCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 877,
+    "vchNombre": "ANTONIA YEPES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 606,
+    "vchNombre": "ANTONINA BUCIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1682,
+    "vchNombre": "ANTONIO ANAYA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2066,
+    "vchNombre": "ANTONIO AYALA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1303,
+    "vchNombre": "ANTONIO CEBIÑON",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2258,
+    "vchNombre": "ANTONIO GOMEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2092,
+    "vchNombre": "ANTONIO HERNANDEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2495,
+    "vchNombre": "ANTONIO LOPEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1162,
+    "vchNombre": "ANTONIO MARTINEZ ORNELAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3496,
+    "vchNombre": "ANTONIO MEZA RODRIGUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3284,
+    "vchNombre": "ANTONIO PEREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 418,
+    "vchNombre": "ANTONIO PIMENTEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1522,
+    "vchNombre": "ANTONIO RUIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1104,
+    "vchNombre": "ANTONIO TORRES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2060,
+    "vchNombre": "ANTONIO VALDOVINOS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 685,
+    "vchNombre": "ANTONIO VARGAS RODRIGUIEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3266,
+    "vchNombre": "ANTONIO VEGA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2915,
+    "vchNombre": "ANTONIO ZEPEDA ORTIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2718,
+    "vchNombre": "AR JALISCO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2415,
+    "vchNombre": "ARACELI DUARTE",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3694,
+    "vchNombre": "ARACELI GUEVARA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1207,
+    "vchNombre": "ARACELI LAGUNAS NAVA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2563,
+    "vchNombre": "ARACELI REYES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3664,
+    "vchNombre": "ARACELI ROSALES TEODORO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 131,
+    "vchNombre": "ARACELI SOLORIO VEGA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1947,
+    "vchNombre": "ARARAT CALDERON",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 594,
+    "vchNombre": "ARCADIO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 1211,
+    "vchNombre": "ARCELORMITTAL GONPA SA DE CV",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1317,
+    "vchNombre": "ARCELORMITTAL LAS TRUCHAS SA DE CV",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 733,
+    "vchNombre": "ARCELORMITTAL LAZARO CARDENAS SA DE CV",
+    "vchRFC": "ALC920108P18",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 1618,
+    "vchNombre": "ARGEL AVILES CABRERA",
+    "vchRFC": "AICA820810ST3",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2179,
+    "vchNombre": "ARGELIA DIAZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 3808,
+    "vchNombre": "ARIANNA AGUIRRE PITA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2333,
+    "vchNombre": "ARIELA VIANEY PERAZA TORRES",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1159,
+    "vchNombre": "ARLEN LOPEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1120,
+    "vchNombre": "ARM BERRIOZABAL PO 134",
+    "vchRFC": "PCM070307LA1",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1542,
+    "vchNombre": "ARM DE LA VEGA PO-133",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2121,
+    "vchNombre": "ARM DURANGO PO-151",
+    "vchRFC": "SMA850101TQ4",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1536,
+    "vchNombre": "ARM FARIAS PO 110",
+    "vchRFC": "PCO970401 GF1",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1478,
+    "vchNombre": "ARM GALEANA F-202",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3274,
+    "vchNombre": "ARM JUAREZ ( POLA - 101 )",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1276,
+    "vchNombre": "ARM MATAMOROS PO-117",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2624,
+    "vchNombre": "ARM MOCTEZUMA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1886,
+    "vchNombre": "ARM TENOCHTITLAN (PC-331)",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 55,
+    "vchNombre": "ARM ZAPOTECO MP02",
+    "vchRFC": "SMA8501019Q4",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1346,
+    "vchNombre": "ARM. GUILLERMO PRIETO PO-143",
+    "vchRFC": "IDE000212FF9",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1879,
+    "vchNombre": "ARMADA DE MEXICO",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 3100,
+    "vchNombre": "ARMANDO BARRAGAN MEZA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 627,
+    "vchNombre": "ARMANDO BAUTISTA MARTINEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2740,
+    "vchNombre": "ARMANDO GARCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2055,
+    "vchNombre": "ARMANDO GUTIERREZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 241,
+    "vchNombre": "ARMANDO MALAGA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2191,
+    "vchNombre": "ARMANDO VALENCIA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 748,
+    "vchNombre": "ARMINDA LUNA MEZAMENUDERIA",
+    "vchRFC": "BSX08021233A",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 2843,
+    "vchNombre": "ARMINDA MALDONADO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1454,
+    "vchNombre": "ARMINDA NAJERA VARELA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1494,
+    "vchNombre": "ARRACHERA XPRESS COFIMSUR",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 82,
+    "vchNombre": "ARRENDADORA GALA SA DE CV BP",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 3
+  },
+  {
+    "pK_Id_Cliente": 2793,
+    "vchNombre": "ARTE PASTEL",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1445,
+    "vchNombre": "ARTEMIO ALVAREZ AMBRIZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1358,
+    "vchNombre": "ARTEMIO RODRIGUEZ",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1882,
+    "vchNombre": "ARTEMIO YAÑES",
+    "vchRFC": "XEXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2318,
+    "vchNombre": "ARTEMISA PAESA GALEANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 2368,
+    "vchNombre": "ARTURO BANDERAS",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1509,
+    "vchNombre": "ARTURO MENDOZA LEMUS",
+    "vchRFC": "JUA1008049P7",
+    "intDiasCredito": 2
+  },
+  {
+    "pK_Id_Cliente": 1840,
+    "vchNombre": "ARTURO NAVA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 1834,
+    "vchNombre": "ARTURO SAUCEDO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 660,
+    "vchNombre": "ASADERO LA MESA DEL REY",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 8
+  },
+  {
+    "pK_Id_Cliente": 3625,
+    "vchNombre": "ASADERO LATOSCANA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  },
+  {
+    "pK_Id_Cliente": 2564,
+    "vchNombre": "ASADO A LA PARRILLA S.A. DE .V.",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 3043,
+    "vchNombre": "ASAEL PONCE SILVA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 0
+  },
+  {
+    "pK_Id_Cliente": 1781,
+    "vchNombre": "ASAMBLEA DE ORACION",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 552,
+    "vchNombre": "ASEO",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 7
+  },
+  {
+    "pK_Id_Cliente": 535,
+    "vchNombre": "ASOCIACION DE RESIDENTES DEL FRACCIONA",
+    "vchRFC": "ARF930510698",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 911,
+    "vchNombre": "ASOCIACION DE SUPERACION FAMILIAR DE MEXICO A",
+    "vchRFC": "ASF9503226GY8",
+    "intDiasCredito": 10
+  },
+  {
+    "pK_Id_Cliente": 3241,
+    "vchNombre": "ASTRID CERNA",
+    "vchRFC": "XAXX010101000",
+    "intDiasCredito": 1
+  }
+]

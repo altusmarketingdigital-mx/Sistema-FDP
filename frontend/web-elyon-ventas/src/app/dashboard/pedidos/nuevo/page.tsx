@@ -21,12 +21,18 @@ export default function NuevoPedidoPage() {
   const [cantidadDefecto, setCantidadDefecto] = useState<number>(1);
   const [errorProducto, setErrorProducto] = useState<string | null>(null);
 
-  // Modal de Búsqueda por Nombre
+  // Modal de Búsqueda por Nombre de Producto
   const [modalAbierto, setModalAbierto] = useState<boolean>(false);
   const [terminoBusquedaNombre, setTerminoBusquedaNombre] = useState<string>("");
   const [resultadosModal, setResultadosModal] = useState<Producto[]>([]);
   const inputModalRef = useRef<HTMLInputElement>(null);
   const inputClaveRef = useRef<HTMLInputElement>(null);
+
+  // Modal de Búsqueda de Clientes
+  const [modalClienteAbierto, setModalClienteAbierto] = useState<boolean>(false);
+  const [terminoCliente, setTerminoCliente] = useState<string>("");
+  const [clientesFiltradosModal, setClientesFiltradosModal] = useState<Cliente[]>([]);
+  const inputClienteModalRef = useRef<HTMLInputElement>(null);
 
   // Partidas del pedido
   const [partidas, setPartidas] = useState<PartidaPedido[]>([]);
@@ -122,8 +128,36 @@ export default function NuevoPedidoPage() {
     }
   };
 
-  // Abrir Modal de Búsqueda por Nombre
-  const abrirModalBusqueda = () => {
+  // Abrir Modal de Búsqueda de Clientes
+  const abrirModalClientes = () => {
+    setModalClienteAbierto(true);
+    setTerminoCliente("");
+    setClientesFiltradosModal(clientes.slice(0, 50));
+    setTimeout(() => {
+      inputClienteModalRef.current?.focus();
+    }, 100);
+  };
+
+  const handleFiltrarClientesModal = (termino: string) => {
+    setTerminoCliente(termino);
+    const t = termino.toLowerCase().trim();
+    if (!t) {
+      setClientesFiltradosModal(clientes.slice(0, 50));
+      return;
+    }
+    const filtrados = clientes.filter(
+      (c) =>
+        (c.vchNombre && c.vchNombre.toLowerCase().includes(t)) ||
+        (c.vchRFC && c.vchRFC.toLowerCase().includes(t))
+    );
+    setClientesFiltradosModal(filtrados.slice(0, 50));
+  };
+
+  const seleccionarClienteDesdeModal = (c: Cliente) => {
+    setClienteSeleccionado(c);
+    setDiasCredito(c.intDiasCredito || 0);
+    setModalClienteAbierto(false);
+  };
     setModalAbierto(true);
     setTerminoBusquedaNombre("");
     setResultadosModal(productos.slice(0, 50));
@@ -270,7 +304,19 @@ export default function NuevoPedidoPage() {
       {/* Datos del Cliente y Condiciones */}
       <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs grid grid-cols-1 md:grid-cols-3 gap-5">
         <div>
-          <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Cliente</label>
+          <div className="flex items-center justify-between mb-1.5">
+            <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">Cliente ({clientes.length})</label>
+            <button
+              type="button"
+              onClick={abrirModalClientes}
+              className="text-xs text-blue-600 hover:text-blue-800 font-bold flex items-center gap-1 transition"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              Buscar Cliente
+            </button>
+          </div>
           <select
             value={clienteSeleccionado?.pK_Id_Cliente || 0}
             onChange={(e) => {
@@ -282,7 +328,7 @@ export default function NuevoPedidoPage() {
           >
             {clientes.map((c) => (
               <option key={c.pK_Id_Cliente} value={c.pK_Id_Cliente}>
-                {c.vchNombre || "Cliente General"} (Crédito: {c.intDiasCredito} días)
+                {c.vchNombre} (Crédito: {c.intDiasCredito || 0} días)
               </option>
             ))}
           </select>
@@ -555,6 +601,90 @@ export default function NuevoPedidoPage() {
               <button
                 type="button"
                 onClick={() => setModalAbierto(false)}
+                className="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-semibold rounded-xl border border-slate-200 transition"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* PANTALLA EMERGENTE (MODAL) PARA BÚSQUEDA DE CLIENTES */}
+      {modalClienteAbierto && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl flex flex-col max-h-[85vh] animate-in fade-in zoom-in-95 duration-150">
+            {/* Cabecera del Modal */}
+            <div className="p-5 border-b border-slate-100 flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-bold text-slate-900">Buscar Cliente</h3>
+                <p className="text-xs text-slate-500 mt-0.5">Selecciona el cliente para aplicar sus días de crédito</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setModalClienteAbierto(false)}
+                className="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm transition"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Input de Búsqueda */}
+            <div className="p-5 border-b border-slate-100 bg-slate-50">
+              <div className="relative">
+                <input
+                  ref={inputClienteModalRef}
+                  type="text"
+                  value={terminoCliente}
+                  onChange={(e) => handleFiltrarClientesModal(e.target.value)}
+                  placeholder="Escribe el nombre o RFC del cliente..."
+                  className="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent shadow-xs transition"
+                />
+                <svg
+                  className="w-5 h-5 text-slate-400 absolute left-3 top-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Lista de Clientes */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-1.5 divide-y divide-slate-100">
+              {clientesFiltradosModal.length === 0 ? (
+                <div className="py-12 text-center text-slate-400 text-sm">
+                  No se encontraron clientes que coincidan con &quot;{terminoCliente}&quot;.
+                </div>
+              ) : (
+                clientesFiltradosModal.map((c) => (
+                  <div
+                    key={c.pK_Id_Cliente}
+                    onClick={() => seleccionarClienteDesdeModal(c)}
+                    className="p-3 rounded-xl hover:bg-blue-50 border border-transparent hover:border-blue-200 cursor-pointer flex items-center justify-between transition group"
+                  >
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900 group-hover:text-blue-700 transition">
+                        {c.vchNombre}
+                      </p>
+                      <p className="text-xs text-slate-400">
+                        RFC: {c.vchRFC || "XAXX010101000"} &bull; Crédito: {c.intDiasCredito || 0} días
+                      </p>
+                    </div>
+                    <span className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg shadow-xs transition">
+                      Seleccionar
+                    </span>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Pie del Modal */}
+            <div className="p-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between text-xs text-slate-500">
+              <span>Mostrando {clientesFiltradosModal.length} clientes</span>
+              <button
+                type="button"
+                onClick={() => setModalClienteAbierto(false)}
                 className="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 font-semibold rounded-xl border border-slate-200 transition"
               >
                 Cerrar

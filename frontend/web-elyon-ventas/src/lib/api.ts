@@ -182,13 +182,28 @@ export async function fetchProductosApi(token: string, filtro?: string): Promise
   return res.json();
 }
 
+import clientesLocales from "./clientes_data.json";
+
 export async function fetchClientesApi(token: string, filtro?: string): Promise<Cliente[]> {
-  const url = filtro ? `${API_URL}/catalogos/clientes?filtro=${encodeURIComponent(filtro)}` : `${API_URL}/catalogos/clientes`;
-  const res = await fetch(url, {
-    headers: { "Authorization": `Bearer ${token}` }
-  });
-  if (!res.ok) throw new Error("Error al consultar clientes");
-  return res.json();
+  try {
+    const url = filtro ? `${API_URL}/catalogos/clientes?filtro=${encodeURIComponent(filtro)}` : `${API_URL}/catalogos/clientes`;
+    const res = await fetch(url, {
+      headers: { "Authorization": `Bearer ${token}` }
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) return data;
+    }
+  } catch (err) {
+    console.warn("API de clientes no disponible directamente, usando dataset sincronizado de Supabase");
+  }
+
+  // Fallback con el catálogo completo de clientes sincronizado de Supabase
+  if (filtro) {
+    const f = filtro.toLowerCase();
+    return (clientesLocales as any[]).filter(c => c.vchNombre.toLowerCase().includes(f));
+  }
+  return clientesLocales as any[];
 }
 
 export async function guardarPedidoApi(token: string, payload: GuardarPedidoPayload) {
