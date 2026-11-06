@@ -96,6 +96,27 @@ export interface TicketData {
   montoLetra: string;
 }
 
+export interface NotaSinPago {
+  no_Nota: number;
+  no_Pedido: string;
+  cliente: string;
+  cajero: string;
+  fecha_Remision: string;
+  fecha_Venta: string;
+  fecha_Vencimiento: string;
+  dias_Credito: number;
+}
+
+export interface PagoHistorial {
+  id: number;
+  idcliente: number;
+  nombre: string;
+  idnota: number;
+  saldO_ANTERIOR: number;
+  saldO_NUEVO: number;
+  fechatimbrado: string;
+}
+
 export async function loginApi(usuario: string, contrasena: string): Promise<LoginResponse> {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
@@ -156,5 +177,45 @@ export async function fetchTicketPedidoApi(token: string, idPedido: number): Pro
     headers: { "Authorization": `Bearer ${token}` }
   });
   if (!res.ok) throw new Error("Error al obtener datos del ticket");
+  return res.json();
+}
+
+export async function fetchNotasSinPagoApi(token: string): Promise<NotaSinPago[]> {
+  const res = await fetch(`${API_URL}/cobranza/notas-sin-pago`, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al consultar notas sin pago");
+  return res.json();
+}
+
+export async function fetchHistorialPagosApi(token: string): Promise<PagoHistorial[]> {
+  const res = await fetch(`${API_URL}/cobranza/pagos`, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al consultar historial de pagos");
+  return res.json();
+}
+
+export async function registrarPagoClienteApi(token: string, payload: any) {
+  const res = await fetch(`${API_URL}/cobranza/pagos`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+  return res.json();
+}
+
+export async function cancelarNotaRemisionApi(token: string, idNotaRemision: number, motivo: string) {
+  const res = await fetch(`${API_URL}/cobranza/cancelar-remision`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ idNotaRemision, motivo })
+  });
   return res.json();
 }

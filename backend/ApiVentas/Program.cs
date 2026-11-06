@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<CatalogosService>();
 builder.Services.AddScoped<VentasService>();
+builder.Services.AddScoped<CobranzaService>();
 
 // 2. CORS para desarrollo y producción con Next.js
 builder.Services.AddCors(options =>
