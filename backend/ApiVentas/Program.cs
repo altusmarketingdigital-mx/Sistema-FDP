@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 // 1. Inyección de dependencias
 builder.Services.AddControllers();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<CatalogosService>();
 
 // 2. CORS para desarrollo y producción con Next.js
 builder.Services.AddCors(options =>

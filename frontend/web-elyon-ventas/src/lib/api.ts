@@ -14,13 +14,26 @@ export interface LoginResponse {
   };
 }
 
-export interface MenuItem {
-  PK_Menu: number;
-  idPadre: number;
-  nombre: string;
-  tipo: string;
-  url?: string;
-  MenuHijo?: MenuItem[];
+export interface Producto {
+  id: number;
+  clave: string;
+  producto: string;
+  precio_Venta_1: number;
+  uM_Venta: string;
+  tiene_Decimal: boolean;
+  inventario_Minimo?: string;
+  inventario_Maximo?: string;
+}
+
+export interface Cliente {
+  pK_Id_Cliente: number;
+  vchNombre: string;
+  vchRFC?: string;
+  vchTelefono?: string;
+  vchLimiteCredito?: string;
+  intDiasCredito: number;
+  bBloqueoCliente: boolean;
+  flDescuento: number;
 }
 
 export async function loginApi(usuario: string, contrasena: string): Promise<LoginResponse> {
@@ -40,8 +53,24 @@ export async function fetchMenuApi(token: string): Promise<any> {
       "Content-Type": "application/json",
     },
   });
-  if (!res.ok) {
-    throw new Error("No se pudo obtener el menú del usuario");
-  }
+  if (!res.ok) throw new Error("No se pudo obtener el menú del usuario");
+  return res.json();
+}
+
+export async function fetchProductosApi(token: string, filtro?: string): Promise<Producto[]> {
+  const url = filtro ? `${API_URL}/catalogos/productos?filtro=${encodeURIComponent(filtro)}` : `${API_URL}/catalogos/productos`;
+  const res = await fetch(url, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al consultar productos");
+  return res.json();
+}
+
+export async function fetchClientesApi(token: string, filtro?: string): Promise<Cliente[]> {
+  const url = filtro ? `${API_URL}/catalogos/clientes?filtro=${encodeURIComponent(filtro)}` : `${API_URL}/catalogos/clientes`;
+  const res = await fetch(url, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al consultar clientes");
   return res.json();
 }
