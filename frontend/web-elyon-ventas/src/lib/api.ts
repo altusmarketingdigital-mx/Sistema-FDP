@@ -117,6 +117,34 @@ export interface PagoHistorial {
   fechatimbrado: string;
 }
 
+export interface MovimientoReporte {
+  id: number;
+  idCliente: number;
+  nombreCliente: string;
+  rfc: string;
+  idPedido: number;
+  folio: string;
+  fechaVentaPedido?: string;
+  idNotaRemision: number;
+  fechaNotaRemision?: string;
+  nombreCajeroNota: string;
+  estatusNotas: string;
+  idCancelar: number;
+  nombreCajeroCancela: string;
+  idPago: number;
+  saldoAnterior: number;
+  saldoNuevo: number;
+  fechaTimbrado?: string;
+}
+
+export interface ResumenDia {
+  fecha: string;
+  totalPedidos: number;
+  montoTotal: number;
+  totalCobrado: number;
+  totalPendiente: number;
+}
+
 export async function loginApi(usuario: string, contrasena: string): Promise<LoginResponse> {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
@@ -208,14 +236,22 @@ export async function registrarPagoClienteApi(token: string, payload: any) {
   return res.json();
 }
 
-export async function cancelarNotaRemisionApi(token: string, idNotaRemision: number, motivo: string) {
-  const res = await fetch(`${API_URL}/cobranza/cancelar-remision`, {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${token}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ idNotaRemision, motivo })
+export async function fetchReporteMovimientosApi(token: string, filtro?: string, id?: number): Promise<MovimientoReporte[]> {
+  let url = `${API_URL}/reportes/movimientos`;
+  if (filtro && id) {
+    url += `?filtro=${encodeURIComponent(filtro)}&id=${id}`;
+  }
+  const res = await fetch(url, {
+    headers: { "Authorization": `Bearer ${token}` }
   });
+  if (!res.ok) throw new Error("Error al consultar reporte de movimientos");
+  return res.json();
+}
+
+export async function fetchResumenDiaApi(token: string): Promise<ResumenDia> {
+  const res = await fetch(`${API_URL}/reportes/resumen-dia`, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al consultar resumen diario");
   return res.json();
 }
