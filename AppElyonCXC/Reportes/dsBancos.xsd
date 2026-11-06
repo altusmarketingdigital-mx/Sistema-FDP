@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBancos" targetNamespace="http://tempuri.org/dsBancos.xsd" xmlns:mstns="http://tempuri.org/dsBancos.xsd" xmlns="http://tempuri.org/dsBancos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBancos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBancos" msprop:Generator_UserDSName="dsBancos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtBancos" msprop:Generator_TableClassName="dtBancosDataTable" msprop:Generator_TableVarName="tabledtBancos" msprop:Generator_RowChangedName="dtBancosRowChanged" msprop:Generator_TablePropName="dtBancos" msprop:Generator_RowDeletingName="dtBancosRowDeleting" msprop:Generator_RowChangingName="dtBancosRowChanging" msprop:Generator_RowEvHandlerName="dtBancosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtBancosRowDeleted" msprop:Generator_RowClassName="dtBancosRow" msprop:Generator_UserTableName="dtBancos" msprop:Generator_RowEvArgName="dtBancosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Clave" msprop:Generator_ColumnVarNameInTable="columnClave" msprop:Generator_ColumnPropNameInRow="Clave" msprop:Generator_ColumnPropNameInTable="ClaveColumn" msprop:Generator_UserColumnName="Clave" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreBanco" msprop:Generator_ColumnVarNameInTable="columnNombreBanco" msprop:Generator_ColumnPropNameInRow="NombreBanco" msprop:Generator_ColumnPropNameInTable="NombreBancoColumn" msprop:Generator_UserColumnName="NombreBanco" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreCorto" msprop:Generator_ColumnVarNameInTable="columnNombreCorto" msprop:Generator_ColumnPropNameInRow="NombreCorto" msprop:Generator_ColumnPropNameInTable="NombreCortoColumn" msprop:Generator_UserColumnName="NombreCorto" type="xs:string" minOccurs="0" />
+              <xs:element name="Estatus" msprop:Generator_ColumnVarNameInTable="columnEstatus" msprop:Generator_ColumnPropNameInRow="Estatus" msprop:Generator_ColumnPropNameInTable="EstatusColumn" msprop:Generator_UserColumnName="Estatus" type="xs:string" minOccurs="0" />
+              <xs:element name="ComisionCredito" msprop:Generator_ColumnVarNameInTable="columnComisionCredito" msprop:Generator_ColumnPropNameInRow="ComisionCredito" msprop:Generator_ColumnPropNameInTable="ComisionCreditoColumn" msprop:Generator_UserColumnName="ComisionCredito" type="xs:string" minOccurs="0" />
+              <xs:element name="ComsionDebito" msprop:Generator_ColumnVarNameInTable="columnComsionDebito" msprop:Generator_ColumnPropNameInRow="ComsionDebito" msprop:Generator_ColumnPropNameInTable="ComsionDebitoColumn" msprop:Generator_UserColumnName="ComsionDebito" type="xs:string" minOccurs="0" />
+              <xs:element name="ComsionChequeDevuelto" msprop:Generator_ColumnVarNameInTable="columnComsionChequeDevuelto" msprop:Generator_ColumnPropNameInRow="ComsionChequeDevuelto" msprop:Generator_ColumnPropNameInTable="ComsionChequeDevueltoColumn" msprop:Generator_UserColumnName="ComsionChequeDevuelto" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

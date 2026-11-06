@@ -1,0 +1,185 @@
+﻿
+================ TABLE: Aplicaciones ================
+PK_Aplicacion                  int             NOT NULL   IDENTITY
+NombreAplicacion               varchar         NULL       
+Estatus                        bit             NULL       
+NombreLargoAplicacion          varchar         NULL       
+
+================ TABLE: AplicacionesUsuarios ================
+PK_AplicacionUsuario           int             NOT NULL   IDENTITY
+FK_Aplicacion                  int             NULL       
+FK_PermisoUsuario              int             NULL       
+
+================ TABLE: AvisosImg ================
+PK_AvisoImg                    int             NOT NULL   IDENTITY
+Orden                          int             NULL       
+Imagen                         text            NULL       
+Estatus                        int             NULL       
+
+================ TABLE: BitacoraUsoAplicaciones ================
+PK_Bitacorauso                 int             NOT NULL   IDENTITY
+FK_PermisoUsuario              int             NULL       
+FK_Menu                        int             NULL       
+FK_Aplicacion                  int             NULL       
+dtFecha                        datetime        NULL       
+
+================ TABLE: Botones_menus ================
+PK_BotonMenu                   int             NOT NULL   IDENTITY
+Fk_Menus                       int             NULL       
+vchIDBoton                     varchar         NULL       
+vchDescripcion                 varchar         NULL       
+EstatusBoton                   bit             NULL       
+
+================ TABLE: Elyon_Parametros ================
+PK_ElyonParametro              int             NOT NULL   IDENTITY
+FK_Aplicacion                  int             NULL       
+vchUsuarioEnvia                varchar         NULL       
+vchContraseñaEnvia             varchar         NULL       
+vchServerMail                  varchar         NULL       
+vchPuertoMail                  varchar         NULL       
+vchRutaImagenAlumno            text            NULL       
+bEstatus                       bit             NULL       
+
+================ TABLE: KeyConn ================
+PK_Key                         int             NOT NULL   IDENTITY
+vchKey                         nvarchar        NULL       
+FK_Aplicacion                  int             NULL       
+
+================ TABLE: Menus ================
+PK_Menu                        int             NOT NULL   IDENTITY
+FK_Aplicacion                  int             NOT NULL   
+NombreProceso                  varchar         NULL       
+SiglasProceso                  char            NULL       
+MensajeProceso                 varchar         NULL       
+NivelProceso                   int             NULL       
+NivelNavegacion                int             NULL       
+FK_TipoProceso                 int             NULL       
+EstatusProceso                 smallint        NULL       
+idPadre                        int             NULL       
+FormaWeb                       varchar         NULL       
+FormaEscritorio                varchar         NULL       
+tipo                           char            NULL       
+Ruta                           varchar         NULL       
+ArmaMenu                       int             NULL       
+SeguridadPlantel               bit             NULL       
+Administrador                  bit             NULL       
+
+================ TABLE: MenusUsuarios ================
+PK_MenuUsuario                 int             NOT NULL   IDENTITY
+FK_Menu                        int             NOT NULL   
+FK_PermisoUsuario              int             NOT NULL   
+bitEstatus                     bit             NULL       
+
+================ TABLE: NivelesSeguridad ================
+PK_NivelSeguridad              int             NOT NULL   IDENTITY
+Nivel                          int             NULL       
+DescripcionNivel               varchar         NULL       
+Estatus                        char            NULL       
+
+================ TABLE: Notificaciones ================
+NotificacionesKey              int             NOT NULL   IDENTITY
+FK_PermisoUsuario              int             NULL       
+FK_Aplicacion                  int             NULL       
+Mensaje                        varchar         NULL       
+Fecha                          datetime        NULL       
+Leido                          int             NULL       
+Borrar                         int             NULL       
+
+================ TABLE: Permiso_Menu_Usuarios ================
+PK_Permiso_Menu_Usuario        int             NOT NULL   IDENTITY
+FK_MenuUsuario                 int             NOT NULL   
+FK_NivelesSeguridad            int             NOT NULL   
+
+================ TABLE: Permisos_Usuarios ================
+PK_PermisoUsuario              int             NOT NULL   IDENTITY
+vchUsuario                     varchar         NOT NULL   
+vchUsuarioSistema              varchar         NOT NULL   
+No_Nomina                      varchar         NULL       
+vchCorreo                      varchar         NOT NULL   
+vchContraseña                  text            NOT NULL   
+bitActivo                      bit             NOT NULL   
+FK_Plantel                     int             NOT NULL   
+bitVerificacion                bit             NOT NULL   
+intAutenticacion               tinyint         NOT NULL   
+bitLoggeado                    bit             NULL       
+dttFechaCreacion               datetime        NULL       
+Imagen                         text            NULL       
+bitAdmn                        bit             NULL       
+dtFechaNacimiento              datetime        NULL       
+vchNombre                      varchar         NULL       
+vchPaterno                     varchar         NULL       
+vchMaterno                     varchar         NULL       
+vchClaveDepto                  varchar         NULL       
+vchDescDepto                   varchar         NULL       
+vchDescPuesto                  varchar         NULL       
+SeguridadAdmin                 bit             NULL       
+
+================ TABLE: Permisos_UsuariosBotones ================
+PK_PermisoUsuarioBoton         int             NOT NULL   IDENTITY
+FK_BotonMenu                   int             NULL       
+FK_PermisoUsuario              int             NULL       
+
+================ TABLE: Planteles ================
+PK_Plantel                     int             NOT NULL   IDENTITY
+ClavePlantel                   int             NOT NULL   
+vchNombre                      varchar         NOT NULL   
+bitActivo                      bit             NOT NULL   
+
+================ TABLE: TipoProceso ================
+PK_TipoProceso                 int             NOT NULL   IDENTITY
+ClaveTipoProceso               char            NOT NULL   
+DescripcionTipoProceso         varchar         NULL       
+
+================ TABLE: Tss_Grupo ================
+PK_Id_Grupo                    int             NOT NULL   IDENTITY
+vchNombre_Grupo                varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: UsuarioMenuVisible ================
+PK_UsuarioMenuVisible          int             NOT NULL   IDENTITY
+FK_Menu                        int             NULL       
+Fk_PermisoUsuario              int             NULL       
+Fk_Aplicacion                  int             NULL       
+bVisible                       bit             NULL       
+
+================ TABLE: UsuariosLogeados ================
+PK_UsuarioLogeado              int             NOT NULL   IDENTITY
+FK_PermisoUsuario              int             NULL       
+FK_Aplicacion                  int             NULL       
+dtFecha                        datetime        NULL       
+bEstado                        bit             NULL       
+
+================ TABLE: UsuariosPlanteles ================
+PK_UsuarioPlantel              int             NOT NULL   IDENTITY
+Fk_usuario                     int             NULL       
+FK_Aplicacion                  int             NULL       
+Fk_menu                        int             NULL       
+Fk_Plantel                     varchar         NULL       
+
+================ TABLE: ValidacionesUsuarios ================
+PK_ValidacionUsuario           int             NOT NULL   IDENTITY
+Fk_Usuario                     int             NULL       
+intCajeroVentas                int             NULL       
+intCancelaVenta                int             NULL       
+intSoloCancelaVenta            int             NULL       
+intDescripArticulo             int             NULL       
+intSoloDescripArticulo         int             NULL       
+intCantidadVenta               int             NULL       
+intSoloCantidadVenta           int             NULL       
+intNoModPrecio                 int             NULL       
+intSoloNoModPrecio             int             NULL       
+intPrecioVenta                 int             NULL       
+intSoloPrecioVenta             int             NULL       
+intOtorgaDesc                  int             NULL       
+intSoloOtorgaDesc              int             NULL       
+intModDatosCred                int             NULL       
+intSoloModDatosCred            int             NULL       
+intParidadMoneda               int             NULL       
+intSoloParidadMoneda           int             NULL       
+intAbreCajon                   int             NULL       
+
+================ TABLE: ValueConn ================
+PK_conn                        int             NOT NULL   IDENTITY
+FK_Key                         int             NULL       
+Value                          nvarchar        NULL       
+Tipo                           nvarchar        NULL       

@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppElyonCXC", "AppElyonCXC\AppElyonCXC.csproj", "{5BCF7138-FD5E-4543-854D-C63E539264C7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{03114BC5-98B5-4509-A047-03E30AED9988} = {03114BC5-98B5-4509-A047-03E30AED9988}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElyonManagerCxC", "ElyonManagerCxC\ElyonManagerCxC.csproj", "{BA13AA9A-6A06-4180-B86C-5B8E854CB518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElyonModelCxC", "ElyonModelCxC\ElyonModelCxC.csproj", "{3607824A-E6DC-4688-9454-5B797B60B25A}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebElyonCxC", "WebElyonCxC\", "{03114BC5-98B5-4509-A047-03E30AED9988}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{3607824a-e6dc-4688-9454-5b797b60b25a}|ElyonModelCxC.dll;{ba13aa9a-6a06-4180-b86c-5b8e854cb518}|ElyonManagerCxC.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50997"
+		Debug.AspNetCompiler.PhysicalPath = "WebElyonCxC\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50997\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50997"
+		Release.AspNetCompiler.PhysicalPath = "WebElyonCxC\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50997\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50997"
+		SlnRelativePath = "WebElyonCxC\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BCF7138-FD5E-4543-854D-C63E539264C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BCF7138-FD5E-4543-854D-C63E539264C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BCF7138-FD5E-4543-854D-C63E539264C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BCF7138-FD5E-4543-854D-C63E539264C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA13AA9A-6A06-4180-B86C-5B8E854CB518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA13AA9A-6A06-4180-B86C-5B8E854CB518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA13AA9A-6A06-4180-B86C-5B8E854CB518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA13AA9A-6A06-4180-B86C-5B8E854CB518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3607824A-E6DC-4688-9454-5B797B60B25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3607824A-E6DC-4688-9454-5B797B60B25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3607824A-E6DC-4688-9454-5B797B60B25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3607824A-E6DC-4688-9454-5B797B60B25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03114BC5-98B5-4509-A047-03E30AED9988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03114BC5-98B5-4509-A047-03E30AED9988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03114BC5-98B5-4509-A047-03E30AED9988}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{03114BC5-98B5-4509-A047-03E30AED9988}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

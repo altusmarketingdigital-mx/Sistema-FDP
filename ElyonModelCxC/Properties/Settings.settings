@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ElyonModelCxC.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ElyonModelCxC_Wscxc_WsCxC" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:50997/wsCxc.asmx</Value>
+    </Setting>
+    <Setting Name="ElyonModelCxC_WsCuentasC_WsCuentasC" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:50997/WsCuentasC.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

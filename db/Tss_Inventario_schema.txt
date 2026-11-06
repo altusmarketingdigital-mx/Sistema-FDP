@@ -1,0 +1,210 @@
+﻿
+================ TABLE: Registro_Cliente ================
+PK_Id_Registro                 int             NOT NULL   IDENTITY
+vchConsecutivo_PV              varchar         NULL       
+
+================ TABLE: Tss_Cancelar_Nota_Remision ================
+PK_Id_Cancelar_Nota_Remisio    int             NOT NULL   IDENTITY
+FK_Id_Nota_Remision            int             NULL       
+dtp_Fecha                      datetime        NULL       
+FK_Id_Cajero                   int             NULL       
+
+================ TABLE: Tss_Cliente ================
+PK_Id_Cliente                  int             NOT NULL   IDENTITY
+vchConsecutivo_PV              varchar         NULL       
+vchContacto                    varchar         NULL       
+vchNombre                      varchar         NULL       
+vchCalle                       varchar         NULL       
+vchNoExterior                  varchar         NULL       
+vchNoInterior                  varchar         NULL       
+vchColonia                     varchar         NULL       
+vchCiudad                      varchar         NULL       
+vchCodigoPostal                varchar         NULL       
+vchMunicipio                   varchar         NULL       
+vchEstado                      varchar         NULL       
+vchPais                        varchar         NULL       
+vchEmail                       varchar         NULL       
+vchTelefono                    varchar         NULL       
+vchTelefono_2                  varchar         NULL       
+vchRFC                         varchar         NULL       
+vchLimiteCredito               varchar         NULL       
+intDiasCredito                 int             NULL       
+vchNoCuenta                    varchar         NULL       
+bBloqueoCliente                bit             NULL       
+vchMotivoBloqueo               varchar         NULL       
+bClienteExportacion            bit             NULL       
+intCostoFactuacion             int             NULL       
+flDescuento                    float           NULL       
+vchComentarios                 varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Datos_Del_Contribuyente ================
+PK_Id_Datos                    int             NOT NULL   IDENTITY
+vchRazonSocial                 varchar         NULL       
+vchRFC                         varchar         NULL       
+vchPais                        varchar         NULL       
+vchEstado                      varchar         NULL       
+vchCiudad                      varchar         NULL       
+vchCalle                       varchar         NULL       
+vchNoInt                       varchar         NULL       
+vchNoExt                       varchar         NULL       
+vchColonia                     varchar         NULL       
+vchCodigoPostal                varchar         NULL       
+vchTelefono                    varchar         NULL       
+vchEmail                       varchar         NULL       
+
+================ TABLE: Tss_Departamento ================
+PK_Id_Departamento             int             NOT NULL   IDENTITY
+vchNombre_Departamento         varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Folio_Pedido ================
+PK_Id_Folio_Pedido             int             NOT NULL   IDENTITY
+vchClaveFolio                  varchar         NULL       
+FK_Id_Usuario                  int             NULL       
+vch_IP_Equipo                  varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Forma_Pago ================
+PK_Id_Forma_Pago               int             NOT NULL   IDENTITY
+vchDescripcion                 varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_FormaPago ================
+PK_Id_Forma_Pago               int             NOT NULL   IDENTITY
+vchClave                       varchar         NULL       
+vchDescripcion                 varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Generar_Pedido ================
+PK_Id_Genera_Pedido            int             NOT NULL   IDENTITY
+vchFolio                       varchar         NULL       
+FK_Id_Usuario                  int             NULL       
+dtp_FechaVenta                 datetime        NULL       
+FK_Id_Cliente                  int             NULL       
+intDiasCredito                 int             NULL       
+dtp_FechaVencimientoCredito    datetime        NULL       
+FK_Metodo_Pago                 int             NULL       
+FK_Forma_Pago                  int             NULL       
+flt_TotalVenta                 float           NULL       
+vchComentario                  varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Generar_Pedido_Detalle ================
+PK_Id_Generar_Pedido_Detalle   int             NOT NULL   IDENTITY
+FK_Id_Generar_Pedido           int             NULL       
+FK_Id_Clave_Producto           varchar         NULL       
+fltCantidad                    float           NULL       
+fltPrecioVenta                 float           NULL       
+dcDescuento                    decimal         NULL       
+fltImporte                     float           NULL       
+bActivo                        bit             NULL       
+vchUmVenta                     varchar         NULL       
+vchComentarioProducto          varchar         NULL       
+
+================ TABLE: Tss_Grupo ================
+PK_Id_Grupo                    int             NOT NULL   IDENTITY
+vchNombre_Grupo                varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Inventario_Producto ================
+PK_Id_Inventario               int             NOT NULL   IDENTITY
+FK_Id_ClaveProducto            int             NULL       
+intUnidadesCompra_Fisco        int             NULL       
+intUnidadesVenta_Fisco         int             NULL       
+intUnidadesVenta_InicialCalculado int             NULL       
+flt_Importa                    float           NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Medidas_Pesos ================
+PK_Id_Medidas                  int             NOT NULL   IDENTITY
+vchNombre                      varchar         NULL       
+
+================ TABLE: Tss_MetodoPago ================
+PK_Id_Metodo_Pago              int             NOT NULL   IDENTITY
+vchClave                       varchar         NULL       
+vchDescripcion                 varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Nota_Remision ================
+PK_Id_Nota_Remision            int             NOT NULL   IDENTITY
+FK_Id_No_Pedido                int             NULL       
+dtp_Fecha_Nota_Remision        datetime        NULL       
+FK_Id_Cajero                   int             NULL       
+vchEstatus_Nota_Remision       varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Producto ================
+PK_Id_Producto                 int             NOT NULL   IDENTITY
+vchClaveProducto               varchar         NULL       
+vchNombre                      varchar         NULL       
+vchLocalizacion                varchar         NULL       
+bitArticuloConDecimal          bit             NULL       
+vch_UM_Compra                  varchar         NULL       
+vch_UM_Venta                   varchar         NULL       
+vchContenido                   varchar         NULL       
+intClaveGrupo                  int             NULL       
+intClaveDepartamento           int             NULL       
+vchInventarioMinimo            varchar         NULL       
+vchInventarioMaximo            varchar         NULL       
+bitProductoExento              bit             NULL       
+fltIEPS                        float           NULL       
+fltIVA                         float           NULL       
+fltPrecioCompra                float           NULL       
+ftl_MargenUtilidad_1           float           NULL       
+flt_PrecioVenta_1              float           NULL       
+ftl_MargenUtilidad_2           float           NULL       
+flt_PrecioVenta_2              float           NULL       
+ftl_MargenUtilidad_3           float           NULL       
+flt_PrecioVenta_3              float           NULL       
+vch_Clave_Unidad_Medida        varchar         NULL       
+vch_Clave_ProdServicio         varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Proveedores ================
+PK_Id_Proveedor                int             NOT NULL   IDENTITY
+vchNombre_Proveedor            varchar         NULL       
+vchCalle_Proveedor             varchar         NULL       
+vchNoExt_Proveedor             varchar         NULL       
+vchNoInt_Proveedor             varchar         NULL       
+vchColonia_Proveedor           varchar         NULL       
+vchCp_Proveedor                varchar         NULL       
+vchCiudad_Proveedor            varchar         NULL       
+vchEstado_Proveedor            varchar         NULL       
+vchPais_Proveedor              varchar         NULL       
+vchEmail_Proveedor             varchar         NULL       
+vchTelefono_Proveedor          varchar         NULL       
+vchCelular_Proveedor           varchar         NULL       
+vchRfc_Proveedor               varchar         NULL       
+vchNoDeCuenta_Proveeddor       varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Registro_Pago_Cliente ================
+PK_Id_Registro_Pago_Cliente    int             NOT NULL   IDENTITY
+FK_Id_Cliente                  int             NULL       
+FK_Id_Nota_Remision            int             NULL       
+flt_Saldo_Anterior             float           NULL       
+flt_Interes                    float           NULL       
+flt_Saldo_Favor                float           NULL       
+flt_Pago_Aplicar               float           NULL       
+flt_Saldo_Nuevo                float           NULL       
+dtp_Fecha_Timbrado             datetime        NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Registro_Pago_Cliente_Detalle ================
+PK_Id_Registro_Pago_Cliente_Detalle int             NOT NULL   IDENTITY
+FK_Id_Registro_Pago_Cliente    int             NULL       
+FK_Id_Forma_Pago               int             NULL       
+flt_Importe_Pago               float           NULL       
+flt_Total_Pago                 float           NULL       
+flt_Cambio_Pago                float           NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Tipo_Catalogo ================
+PK_Id_Tipo_Catalogo            int             NOT NULL   IDENTITY
+vchDescripcion                 varchar         NULL       
+bActivo                        bit             NULL       
+
+================ TABLE: Tss_Unidad_Medida ================
+PK_Id_Unidad                   int             NOT NULL   IDENTITY
+vchUnidad                      varchar         NULL       

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="AppElyonCXC" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="AppElyonCXC" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="AppElyonCXC">
+      <s:element name="bObtener">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Contraseña" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bObtenerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bObtenerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strJson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTipo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strJsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsObtener">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTipo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsObtenerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsObtenerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bObtener1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTipo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="bObtener1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bObtener1Result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="bObtenerSoapIn">
+    <wsdl:part name="parameters" element="tns:bObtener" />
+  </wsdl:message>
+  <wsdl:message name="bObtenerSoapOut">
+    <wsdl:part name="parameters" element="tns:bObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="strJsonSoapIn">
+    <wsdl:part name="parameters" element="tns:strJson" />
+  </wsdl:message>
+  <wsdl:message name="strJsonSoapOut">
+    <wsdl:part name="parameters" element="tns:strJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="dsObtenerSoapIn">
+    <wsdl:part name="parameters" element="tns:dsObtener" />
+  </wsdl:message>
+  <wsdl:message name="dsObtenerSoapOut">
+    <wsdl:part name="parameters" element="tns:dsObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="bObtener1SoapIn">
+    <wsdl:part name="parameters" element="tns:bObtener1" />
+  </wsdl:message>
+  <wsdl:message name="bObtener1SoapOut">
+    <wsdl:part name="parameters" element="tns:bObtener1Response" />
+  </wsdl:message>
+  <wsdl:portType name="WsCxCSoap">
+    <wsdl:operation name="bObtener">
+      <wsdl:input message="tns:bObtenerSoapIn" />
+      <wsdl:output message="tns:bObtenerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="strJson">
+      <wsdl:input message="tns:strJsonSoapIn" />
+      <wsdl:output message="tns:strJsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dsObtener">
+      <wsdl:input message="tns:dsObtenerSoapIn" />
+      <wsdl:output message="tns:dsObtenerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="bObtener1">
+      <wsdl:input message="tns:bObtener1SoapIn" />
+      <wsdl:output message="tns:bObtener1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsCxCSoap" type="tns:WsCxCSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bObtener">
+      <soap:operation soapAction="AppElyonCXC/bObtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strJson">
+      <soap:operation soapAction="AppElyonCXC/strJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsObtener">
+      <soap:operation soapAction="AppElyonCXC/dsObtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bObtener1">
+      <soap:operation soapAction="AppElyonCXC/bObtener1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WsCxCSoap12" type="tns:WsCxCSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="bObtener">
+      <soap12:operation soapAction="AppElyonCXC/bObtener" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strJson">
+      <soap12:operation soapAction="AppElyonCXC/strJson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dsObtener">
+      <soap12:operation soapAction="AppElyonCXC/dsObtener" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bObtener1">
+      <soap12:operation soapAction="AppElyonCXC/bObtener1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsCxC">
+    <wsdl:port name="WsCxCSoap" binding="tns:WsCxCSoap">
+      <soap:address location="http://localhost:50997/WsCxC.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WsCxCSoap12" binding="tns:WsCxCSoap12">
+      <soap12:address location="http://localhost:50997/WsCxC.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
