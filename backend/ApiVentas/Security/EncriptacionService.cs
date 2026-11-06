@@ -5,7 +5,7 @@ namespace ApiVentas.Security;
 
 public static class EncriptacionService
 {
-    private const string LegacyKey = "Cu3nt4sxC0br4r";
+    private const string LegacyKey = "UN1v4F4ctur43";
 
     public static string EncriptarContrasena(string texto)
     {
