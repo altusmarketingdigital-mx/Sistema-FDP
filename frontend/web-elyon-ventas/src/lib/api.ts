@@ -145,6 +145,17 @@ export interface ResumenDia {
   totalPendiente: number;
 }
 
+export interface UsuarioSistema {
+  idUsuario: number;
+  usuario: string;
+  nombreCompleto: string;
+  nomina: string;
+  correo: string;
+  activo: boolean;
+  esAdmin: boolean;
+  fechaCreacion?: string;
+}
+
 export async function loginApi(usuario: string, contrasena: string): Promise<LoginResponse> {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
@@ -253,5 +264,13 @@ export async function fetchResumenDiaApi(token: string): Promise<ResumenDia> {
     headers: { "Authorization": `Bearer ${token}` }
   });
   if (!res.ok) throw new Error("Error al consultar resumen diario");
+  return res.json();
+}
+
+export async function fetchUsuariosSistemaApi(token: string): Promise<UsuarioSistema[]> {
+  const res = await fetch(`${API_URL}/seguridad/usuarios`, {
+    headers: { "Authorization": `Bearer ${token}` }
+  });
+  if (!res.ok) throw new Error("Error al consultar usuarios del sistema");
   return res.json();
 }
