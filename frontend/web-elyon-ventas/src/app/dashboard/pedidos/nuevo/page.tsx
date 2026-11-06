@@ -16,19 +16,15 @@ export default function NuevoPedidoPage() {
   const [productos, setProductos] = useState<Producto[]>([]);
   const [clienteSeleccionado, setClienteSeleccionado] = useState<Cliente | null>(null);
 
-  // Formulario de partida
+  // Formulario de partida por clave
   const [claveBusqueda, setClaveBusqueda] = useState<string>("");
-  const [productoSeleccionado, setProductoSeleccionado] = useState<Producto | null>(null);
-  const [cantidad, setCantidad] = useState<number>(1);
-  const [precio, setPrecio] = useState<number>(0);
-  const [descuento, setDescuento] = useState<number>(0);
+  const [cantidadDefecto, setCantidadDefecto] = useState<number>(1);
   const [errorProducto, setErrorProducto] = useState<string | null>(null);
 
   // Modal de Búsqueda por Nombre
   const [modalAbierto, setModalAbierto] = useState<boolean>(false);
   const [terminoBusquedaNombre, setTerminoBusquedaNombre] = useState<string>("");
   const [resultadosModal, setResultadosModal] = useState<Producto[]>([]);
-  const [buscandoEnModal, setBuscandoEnModal] = useState<boolean>(false);
   const inputModalRef = useRef<HTMLInputElement>(null);
   const inputClaveRef = useRef<HTMLInputElement>(null);
 
@@ -58,25 +54,63 @@ export default function NuevoPedidoPage() {
     });
   }, []);
 
-  // Buscar por clave al presionar Enter o perder foco
-  const buscarPorClave = (claveAValidar?: string) => {
-    const clave = (claveAValidar !== undefined ? claveAValidar : claveBusqueda).trim();
-    if (!clave) {
-      setProductoSeleccionado(null);
-      setErrorProducto(null);
-      return;
-    }
+  // Función reutilizable para insertar producto directamente a la tabla
+  const agregarProductoDirecto = (prod: Producto, cant: number = 1) => {
+    const cantValida = cant > 0 ? cant : 1;
+    const precioUnitario = prod.precio_Venta_1 || 0;
+    
+    // Si el producto ya está en la lista, aumentamos la cantidad
+    setPartidas((prevPartidas) => {
+      const idxExistente = prevPartidas.findIndex(
+        (p) => p.claveProducto.toLowerCase() === prod.clave.toLowerCase()
+      );
+
+      if (idxExistente >= 0) {
+        const actualizadas = [...prevPartidas];
+        const partidaActual = actualizadas[idxExistente];
+        const nuevaCant = Number((partidaActual.cantidad + cantValida).toFixed(2));
+        const nuevoImporte = Number((nuevaCant * partidaActual.precioVenta - partidaActual.descuento).toFixed(2));
+        
+        actualizadas[idxExistente] = {
+          ...partidaActual,
+          cantidad: nuevaCant,
+          importe: Math.max(0, nuevoImporte)
+        };
+        return actualizadas;
+      } else {
+        const nuevoImporte = Number((cantValida * precioUnitario).toFixed(2));
+        const nuevaPartida: PartidaPedido = {
+          claveProducto: prod.clave,
+          nombreProducto: prod.producto,
+          cantidad: cantValida,
+          umVenta: prod.uM_Venta || "PZA",
+          precioVenta: precioUnitario,
+          descuento: 0,
+          importe: Math.max(0, nuevoImporte)
+        };
+        return [nuevaPartida, ...prevPartidas];
+      }
+    });
+
+    // Limpiar campo de clave y mantener foco
+    setClaveBusqueda("");
+    setErrorProducto(null);
+    inputClaveRef.current?.focus();
+  };
+
+  // Buscar por clave al presionar Enter
+  const buscarYAgregarPorClave = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const clave = claveBusqueda.trim();
+    if (!clave) return;
 
     const prod = productos.find(
       (p) => p.clave.toLowerCase() === clave.toLowerCase()
     );
 
     if (prod) {
-      setProductoSeleccionado(prod);
-      setPrecio(prod.precio_Venta_1 || 0);
-      setErrorProducto(null);
+      agregarProductoDirecto(prod, cantidadDefecto);
     } else {
-      setProductoSeleccionado(null);
       setErrorProducto(`No se encontró ningún producto con la clave "${clave}".`);
     }
   };
@@ -84,7 +118,7 @@ export default function NuevoPedidoPage() {
   const handleKeyDownClave = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      buscarPorClave();
+      buscarYAgregarPorClave();
     }
   };
 
@@ -92,7 +126,7 @@ export default function NuevoPedidoPage() {
   const abrirModalBusqueda = () => {
     setModalAbierto(true);
     setTerminoBusquedaNombre("");
-    setResultadosModal(productos.slice(0, 50)); // Primeros 50 productos de arranque
+    setResultadosModal(productos.slice(0, 50));
     setTimeout(() => {
       inputModalRef.current?.focus();
     }, 100);
@@ -115,53 +149,41 @@ export default function NuevoPedidoPage() {
     setResultadosModal(filtrados.slice(0, 50));
   };
 
-  // Seleccionar producto desde el modal
+  // Seleccionar producto desde el modal: lo manda DIRECTO a la tabla y cierra el modal
   const seleccionarDesdeModal = (p: Producto) => {
-    setProductoSeleccionado(p);
-    setClaveBusqueda(p.clave);
-    setPrecio(p.precio_Venta_1 || 0);
-    setErrorProducto(null);
+    agregarProductoDirecto(p, cantidadDefecto);
     setModalAbierto(false);
-    inputClaveRef.current?.focus();
   };
 
-  const handleCambioCliente = (idCliente: number) => {
-    const c = clientes.find((x) => x.pK_Id_Cliente === idCliente) || null;
-    setClienteSeleccionado(c);
-    setDiasCredito(c?.intDiasCredito || 0);
+  // Modificar cantidad o descuento en la tabla directamente
+  const handleActualizarCantidadEnTabla = (index: number, nuevaCantidad: number) => {
+    if (nuevaCantidad <= 0) return;
+    setPartidas((prev) => {
+      const actualizadas = [...prev];
+      const p = actualizadas[index];
+      const imp = Number((nuevaCantidad * p.precioVenta - p.descuento).toFixed(2));
+      actualizadas[index] = {
+        ...p,
+        cantidad: nuevaCantidad,
+        importe: Math.max(0, imp)
+      };
+      return actualizadas;
+    });
   };
 
-  const handleAgregarPartida = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!productoSeleccionado) {
-      alert("Ingresa una clave válida o selecciona un producto por nombre.");
-      return;
-    }
-    if (cantidad <= 0) {
-      alert("La cantidad debe ser mayor a 0.");
-      return;
-    }
-
-    const importe = (cantidad * precio) - descuento;
-    const nuevaPartida: PartidaPedido = {
-      claveProducto: productoSeleccionado.clave,
-      nombreProducto: productoSeleccionado.producto,
-      cantidad,
-      umVenta: productoSeleccionado.uM_Venta || "PZA",
-      precioVenta: precio,
-      descuento,
-      importe: Math.max(0, importe)
-    };
-
-    setPartidas([...partidas, nuevaPartida]);
-    // Limpiar para siguiente captura
-    setClaveBusqueda("");
-    setProductoSeleccionado(null);
-    setCantidad(1);
-    setPrecio(0);
-    setDescuento(0);
-    setErrorProducto(null);
-    inputClaveRef.current?.focus();
+  const handleActualizarDescuentoEnTabla = (index: number, nuevoDescuento: number) => {
+    if (nuevoDescuento < 0) return;
+    setPartidas((prev) => {
+      const actualizadas = [...prev];
+      const p = actualizadas[index];
+      const imp = Number((p.cantidad * p.precioVenta - nuevoDescuento).toFixed(2));
+      actualizadas[index] = {
+        ...p,
+        descuento: nuevoDescuento,
+        importe: Math.max(0, imp)
+      };
+      return actualizadas;
+    });
   };
 
   const handleEliminarPartida = (index: number) => {
@@ -198,7 +220,7 @@ export default function NuevoPedidoPage() {
 
       if (res.exito) {
         setIdPedidoGenerado(res.idPedido);
-        setMensajeExito(`¡Pedido registrado exitosamente! ID Folio: ${res.idPedido}`);
+        setMensajeExito(`¡Pedido registrado exitosamente! Folio: ${res.idPedido}`);
         setPartidas([]);
         setComentario("");
       } else {
@@ -216,7 +238,7 @@ export default function NuevoPedidoPage() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Generar Nuevo Pedido</h1>
-          <p className="text-sm text-slate-500 mt-0.5">Captura ágil por clave de producto o búsqueda por nombre</p>
+          <p className="text-sm text-slate-500 mt-0.5">Captura directa por clave o búsqueda por nombre al instante</p>
         </div>
         <div className="flex items-center gap-3">
           <Link
@@ -251,7 +273,11 @@ export default function NuevoPedidoPage() {
           <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Cliente</label>
           <select
             value={clienteSeleccionado?.pK_Id_Cliente || 0}
-            onChange={(e) => handleCambioCliente(Number(e.target.value))}
+            onChange={(e) => {
+              const c = clientes.find((x) => x.pK_Id_Cliente === Number(e.target.value)) || null;
+              setClienteSeleccionado(c);
+              setDiasCredito(c?.intDiasCredito || 0);
+            }}
             className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
           >
             {clientes.map((c) => (
@@ -284,14 +310,27 @@ export default function NuevoPedidoPage() {
         </div>
       </div>
 
-      {/* Captura de Productos por Clave con Botón a Modal de Búsqueda */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-4">
-        <form onSubmit={handleAgregarPartida} className="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
-          {/* Campo de Clave */}
-          <div className="md:col-span-3">
+      {/* Barra de Captura Rápida de Producto (Envío Automático a la Tabla) */}
+      <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-3">
+        <form onSubmit={buscarYAgregarPorClave} className="grid grid-cols-1 md:grid-cols-12 gap-3 items-end">
+          <div className="md:col-span-2">
+            <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
+              Cantidad
+            </label>
+            <input
+              type="number"
+              min="0.01"
+              step="any"
+              value={cantidadDefecto}
+              onChange={(e) => setCantidadDefecto(Number(e.target.value))}
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-center transition"
+            />
+          </div>
+
+          <div className="md:col-span-7">
             <div className="flex items-center justify-between mb-1.5">
               <label className="text-xs font-bold text-slate-600 uppercase tracking-wider">
-                Clave del Producto
+                Ingresa Clave (Enter para agregar)
               </label>
               <button
                 type="button"
@@ -313,91 +352,22 @@ export default function NuevoPedidoPage() {
                   setClaveBusqueda(e.target.value);
                   setErrorProducto(null);
                 }}
-                onBlur={() => buscarPorClave()}
                 onKeyDown={handleKeyDownClave}
-                placeholder="Ej. 0001 (Enter para buscar)"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
+                placeholder="Escribe la clave del producto y presiona Enter..."
+                className="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition"
               />
-              <button
-                type="button"
-                onClick={() => buscarPorClave()}
-                title="Validar Clave"
-                className="absolute right-2 top-2 p-1 text-slate-400 hover:text-blue-600 transition"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           </div>
 
-          {/* Nombre / Descripción del Producto Detectado */}
-          <div className="md:col-span-4">
-            <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-              Descripción del Producto
-            </label>
-            <div className={`px-3.5 py-2.5 rounded-xl border text-sm font-medium truncate flex items-center justify-between ${
-              productoSeleccionado 
-                ? "bg-blue-50/50 border-blue-200 text-slate-900" 
-                : "bg-slate-100/60 border-slate-200 text-slate-400"
-            }`}>
-              <span>{productoSeleccionado ? productoSeleccionado.producto : "Introduce una clave o busca por nombre..."}</span>
-              {productoSeleccionado && (
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 shrink-0">
-                  {productoSeleccionado.uM_Venta || "PZA"}
-                </span>
-              )}
-            </div>
-          </div>
-
-          {/* Cantidad */}
-          <div className="md:col-span-1">
-            <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Cant.</label>
-            <input
-              type="number"
-              step={productoSeleccionado?.tiene_Decimal ? "0.01" : "1"}
-              min="0.01"
-              value={cantidad}
-              onChange={(e) => setCantidad(Number(e.target.value))}
-              className="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-center transition"
-            />
-          </div>
-
-          {/* Precio */}
-          <div className="md:col-span-1">
-            <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Precio ($)</label>
-            <input
-              type="number"
-              step="0.01"
-              value={precio}
-              onChange={(e) => setPrecio(Number(e.target.value))}
-              className="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-right transition"
-            />
-          </div>
-
-          {/* Descuento */}
-          <div className="md:col-span-1">
-            <label className="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">Desc. ($)</label>
-            <input
-              type="number"
-              step="0.01"
-              value={descuento}
-              onChange={(e) => setDescuento(Number(e.target.value))}
-              className="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white text-right transition"
-            />
-          </div>
-
-          {/* Botón Agregar */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <button
               type="submit"
-              disabled={!productoSeleccionado}
-              className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-40 text-white font-bold text-sm rounded-xl shadow-xs transition flex items-center justify-center gap-1.5"
+              className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm rounded-xl shadow-xs transition flex items-center justify-center gap-1.5"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
-              + Agregar
+              Agregar Producto
             </button>
           </div>
         </form>
@@ -416,16 +386,16 @@ export default function NuevoPedidoPage() {
         )}
       </div>
 
-      {/* Tabla de Partidas */}
+      {/* Tabla de Partidas con edición directa */}
       <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
         <table className="w-full text-left text-sm text-slate-700">
           <thead className="bg-slate-50 text-xs uppercase text-slate-500 border-b border-slate-200">
             <tr>
               <th className="px-6 py-3.5 font-bold">Clave</th>
               <th className="px-6 py-3.5 font-bold">Producto</th>
-              <th className="px-6 py-3.5 font-bold text-center">Cant.</th>
+              <th className="px-6 py-3.5 font-bold text-center w-28">Cant.</th>
               <th className="px-6 py-3.5 font-bold text-right">Precio</th>
-              <th className="px-6 py-3.5 font-bold text-right">Desc.</th>
+              <th className="px-6 py-3.5 font-bold text-right w-28">Desc. ($)</th>
               <th className="px-6 py-3.5 font-bold text-right">Importe</th>
               <th className="px-6 py-3.5 font-bold text-center">Acción</th>
             </tr>
@@ -433,19 +403,37 @@ export default function NuevoPedidoPage() {
           <tbody className="divide-y divide-slate-100">
             {partidas.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-6 py-10 text-center text-slate-400 text-sm font-medium">
-                  No hay artículos agregados al pedido.
+                <td colSpan={7} className="px-6 py-12 text-center text-slate-400 text-sm font-medium">
+                  No hay artículos agregados. Ingresa una clave o pulsa &quot;Buscar por Nombre&quot;.
                 </td>
               </tr>
             ) : (
               partidas.map((p, idx) => (
                 <tr key={idx} className="hover:bg-slate-50/80 transition">
-                  <td className="px-6 py-3.5 font-mono text-blue-600 font-semibold text-xs">{p.claveProducto}</td>
+                  <td className="px-6 py-3.5 font-mono text-blue-600 font-bold text-xs">{p.claveProducto}</td>
                   <td className="px-6 py-3.5 font-medium text-slate-900">{p.nombreProducto}</td>
-                  <td className="px-6 py-3.5 text-center text-slate-600">{p.cantidad} {p.umVenta}</td>
+                  <td className="px-6 py-3.5 text-center">
+                    <input
+                      type="number"
+                      min="0.01"
+                      step="any"
+                      value={p.cantidad}
+                      onChange={(e) => handleActualizarCantidadEnTabla(idx, Number(e.target.value))}
+                      className="w-20 px-2 py-1 bg-slate-50 border border-slate-300 rounded-lg text-slate-900 text-xs font-semibold text-center focus:outline-none focus:ring-1 focus:ring-blue-600 focus:bg-white"
+                    />
+                  </td>
                   <td className="px-6 py-3.5 text-right font-medium text-slate-600">${p.precioVenta.toFixed(2)}</td>
-                  <td className="px-6 py-3.5 text-right text-rose-600 font-medium">${p.descuento.toFixed(2)}</td>
-                  <td className="px-6 py-3.5 text-right font-bold text-slate-900">${p.importe.toFixed(2)}</td>
+                  <td className="px-6 py-3.5 text-right">
+                    <input
+                      type="number"
+                      min="0"
+                      step="any"
+                      value={p.descuento}
+                      onChange={(e) => handleActualizarDescuentoEnTabla(idx, Number(e.target.value))}
+                      className="w-20 px-2 py-1 bg-slate-50 border border-slate-300 rounded-lg text-slate-900 text-xs font-semibold text-right focus:outline-none focus:ring-1 focus:ring-blue-600 focus:bg-white"
+                    />
+                  </td>
+                  <td className="px-6 py-3.5 text-right font-black text-slate-900">${p.importe.toFixed(2)}</td>
                   <td className="px-6 py-3.5 text-center">
                     <button
                       onClick={() => handleEliminarPartida(idx)}
@@ -489,7 +477,7 @@ export default function NuevoPedidoPage() {
             <div className="p-5 border-b border-slate-100 flex items-center justify-between">
               <div>
                 <h3 className="text-lg font-bold text-slate-900">Buscar Producto por Nombre</h3>
-                <p className="text-xs text-slate-500 mt-0.5">Escribe el nombre o descripción para filtrar el catálogo ({productos.length} productos)</p>
+                <p className="text-xs text-slate-500 mt-0.5">Haz clic sobre cualquier producto para agregarlo automáticamente al pedido</p>
               </div>
               <button
                 type="button"
@@ -523,7 +511,7 @@ export default function NuevoPedidoPage() {
             </div>
 
             {/* Lista de Resultados */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-2 divide-y divide-slate-100">
+            <div className="flex-1 overflow-y-auto p-4 space-y-1.5 divide-y divide-slate-100">
               {resultadosModal.length === 0 ? (
                 <div className="py-12 text-center text-slate-400 text-sm">
                   No se encontraron productos que coincidan con &quot;{terminoBusquedaNombre}&quot;.
@@ -533,7 +521,7 @@ export default function NuevoPedidoPage() {
                   <div
                     key={p.id}
                     onClick={() => seleccionarDesdeModal(p)}
-                    className="p-3 pt-3.5 rounded-xl hover:bg-blue-50/80 border border-transparent hover:border-blue-200 cursor-pointer flex items-center justify-between transition group"
+                    className="p-3 rounded-xl hover:bg-blue-50 border border-transparent hover:border-blue-200 cursor-pointer flex items-center justify-between transition group"
                   >
                     <div className="flex items-center gap-3">
                       <span className="px-2.5 py-1 rounded-lg bg-slate-100 font-mono text-xs font-bold text-slate-700 group-hover:bg-blue-600 group-hover:text-white transition">
@@ -548,12 +536,12 @@ export default function NuevoPedidoPage() {
                         </p>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right flex items-center gap-4">
                       <span className="text-base font-extrabold text-emerald-600">
                         ${Number(p.precio_Venta_1).toFixed(2)}
                       </span>
-                      <span className="block text-[10px] text-blue-600 font-bold opacity-0 group-hover:opacity-100 transition">
-                        Seleccionar ↵
+                      <span className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg shadow-xs transition">
+                        + Agregar
                       </span>
                     </div>
                   </div>
