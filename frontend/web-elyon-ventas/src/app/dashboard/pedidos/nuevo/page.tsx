@@ -158,6 +158,9 @@ export default function NuevoPedidoPage() {
     setDiasCredito(c.intDiasCredito || 0);
     setModalClienteAbierto(false);
   };
+
+  // Abrir Modal de Búsqueda de Productos
+  const abrirModalBusqueda = () => {
     setModalAbierto(true);
     setTerminoBusquedaNombre("");
     setResultadosModal(productos.slice(0, 50));
